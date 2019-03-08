@@ -48,6 +48,19 @@ form,
 p {
   margin: 0;
 }
+.markdown-content p {
+  margin: 20px;
+}
+.markdown-content li p {
+  margin: 0 0 20px 0;
+}
+.time-tag {
+  text-align: right;
+}
+.time-tag span {
+  display: block;
+  margin: 10px;
+}
 a {
   text-decoration: none;
   color: #42b983;
@@ -154,7 +167,7 @@ h2.article-head {
   }
 }
 #article-banner h2 {
-  margin: 0.4em 0;
+  margin: 0.4em 0 1em 0;
   font-size: 2.2em;
   color: #fff;
   text-shadow: 0 0 40px #34495e;
