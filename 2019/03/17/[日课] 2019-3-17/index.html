@@ -11,7 +11,7 @@
    -->
   <title>
     
-      Echarts 之复合饼图的解决方案 | tubbodeTang
+      【日课】 2019-3-17 | tubbodeTang
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -78,43 +78,30 @@
 </header>
 
     <div id="article-banner">
-  <h2>Echarts 之复合饼图的解决方案</h2>
-  <!-- <p class="post-date">05/22/2018</p> -->
+  <h2>【日课】 2019-3-17</h2>
+  <!-- <p class="post-date">03/17/2019</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
 </div>
 <main class="app-body">
   <article class="post-article">
-    <section class="markdown-content"><blockquote>
-<p>Echarts 是百度出品的功能强大的开源可视化库，由 Javascript 实现。<br>具有丰富的可视化类型，良好的跨平台特性，绚丽的视觉效果。<br>是大数据分析展示的有力武器</p>
-</blockquote>
-<p>老实说其实在我刚进入前端开发这个领域的时候就听说并使用了 Echarts ，那个时候还是 1.0 版本。</p>
-<p>最开始只是用到一些简单的条、饼、线图的组合展示，有时候我还会偷懒直接使用 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 的可视化功能进行操作，也还挺方便的，不用记那么多属性，但是现在 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 已经满足不了我更高级的需求了，有什么问题还是看文档更清晰。</p>
-<p>一直到今天，Echarts 已经出了 4.0 版本，功能和性能都有了非常的大的提升，也正因为这样，使用 Echarts 的人越来越多，Echarts 的社区也越来越活跃，活跃的社区又会促进 Echarts 生生不息的向前发展，形成一个良性循环。我想，这就是开源的魅力吧。</p>
-<p>最近在工作当中使用 Echarts 来深度挖掘和展示我手头的数据，发现有一个地方可能需要复合饼图来展示效果比较好。</p>
-<p>看了很多官方的实例，没有特别称手能直接拿来用的。GitHub 上 Echarts 的 Issues 区我也去搜了，看有没有人已经踩过坑。结果发现一天前，就有人提了一个和我一模一样的情景，问有没有用复合图来实现的方案，他也不知道怎么解决。</p>
-<p>哈哈，结果还是要靠自己了。</p>
-<p>于是乎看了一些 Echarts Gallery 上大家的奇思妙想之后，我也有了灵感。</p>
-<p>（这里穿插说一句，Echarts 升级之后社区真的变强了很多，不仅有很清晰的官方文档和实例，Gallery 里各方大神的脑洞也真的很精彩，比如我就看见过用 Echarts 做动画的，Flappy Bird，扫雷，还有一些酷炫的 3D 效果我就不说了，一打开那界面电脑风扇都开始呜呜响，哈哈，留待给以后慢慢发掘，有空专门再写一个收集贴。）</p>
-<h4 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h4><p>第一个方案是想画两个饼图，再用 series-&gt;type:graph 这个属性画两根线把两个饼图连起来。</p>
-<p>尝试了多次，发现不能通过点坐标的调整得到线的正确位置。我想要的是直角坐标，所以从直角坐标的角度看来，线的中心点是固定的，一直在 (0，0) ，不能上下左右移动。也就是说 y=kx+b 的 b 一直都是 0，只有线的斜率一直在变化，所以我判断那个坐标有可能是极坐标，所以才没有办法按直角坐标得到正确的结果。</p>
-<p>而且使用这种方式还有一个弊端，就是两个饼图连接点的坐标，其实不那么好确定，因为有可能随着百分比的变化而变化。所以最终，我放弃了这个方案。</p>
-<h4 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h4><p>换一个思路，采用之前在 Gallery 中看见过的环状图套饼图来实现。</p>
-<p>我看见过用透明环状饼区来占位的，这样看起来透明饼区就不存在了，只能看到不透明的饼区，刚好可以用来做展开的详细复合图。</p>
-<p>于是乎有了下面这个效果，具体代码实现和结果可以到 Gallery 里 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">查看</a>。</p>
-<p><img src="http://echarts.baidu.com/ecg-storage/img/xHJaWqD-1Q.png" alt="实现效果缩略图" title="实现效果缩略图"></p>
-<p>两个版本的思路出来效果之后，我都给了 GitHub Issues 上和我相同问题的那个哥们一个回复，他也回复了我，和大家一起思考问题的感觉还是很棒的。</p>
-<p>我发表在 Gallery 里的 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">示例</a>，截至目前也已经有了二十多次的浏览量。</p>
-<p>这就是分享的力量，它不仅帮助别人，同时也在激励监督自己，让自己做的更好。</p>
-<p>这是我第一次体验到分享的乐趣，所以记录下来，鞭策自己以后更加努力！</p>
+    <section class="markdown-content"><h4 id="工作上"><a href="#工作上" class="headerlink" title="工作上"></a>工作上</h4><p>说好周末写关于定位的总结最后还是没写……<br>人啊，真的是打脸怪。</p>
+<p>问题是为什么安排给自己的任务总是不能完成呢？<br>周末真的有那么累吗？（好像是有的…………<br>那么或者周末就不要给自己安排什么根本不能做到的任务吧？<br>不如做一些同样有意义，但自己更喜欢做的事，这样既能好好完成，又不会显得枯燥。<br>完成的动力也更高了吧。</p>
+<h4 id="生活上"><a href="#生活上" class="headerlink" title="生活上"></a>生活上</h4><p>昨天说到了感恩的心，今天也同样要怀有这样的心啊。<br>因为接到了一个陌生伯伯的电话。<br>而且以后接打电话也要注意礼仪了，不经常讲话感觉讲话的功力还是弱了点。</p>
+<p>感觉对自己今天与伯伯的通话表现并不满意，讲很久才讲到他想要听的重点。<br>这是自己一直以来经常有的毛病。<br>就像有时候听老爸、大伯、爷爷讲话一样，他们也扯很远然后讲不到重点，让听的人昏昏欲睡……<br>这不会是遗传吧哈哈，唉。<br>以后自己平时一定要注意这一点，刻意的去锻炼一下。嗯。</p>
+<p>然后今天出去逛了一下，看到了白柴和猫们，好可爱，想养一个<br>不过这也要求自己分配好用在更重要的人和事与工作这两者上的时间啊。<br>等自己变得更好了，一定要拥有一个。</p>
+<h4 id="任务完成情况"><a href="#任务完成情况" class="headerlink" title="任务完成情况"></a>任务完成情况</h4><ul>
+<li>做了运动一套</li>
+<li>读书 1+ 小时</li>
+</ul>
 </section>
     <!-- 
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#Echarts" >
-    <span class="tag-code">Echarts</span>
+  <a href="/tags#生活 经历" >
+    <span class="tag-code">生活 经历</span>
   </a>
 
       </div>
@@ -137,7 +124,7 @@
     </div> -->
     <div class="time-tag">
       <span>tubbodeTang</span>
-      <span>2018-05-22</span>
+      <span>2019-03-17</span>
     </div>
 
     <div class="qrcode">
@@ -152,7 +139,7 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2018/05/22/echarts 之复合饼图的解决方案/';
+    var url = 'http://yoursite.com/2019/03/17/[日课] 2019-3-17/';
     var banner = ''
     if (banner) {
       $('#article-banner').css({
@@ -203,7 +190,7 @@
     var gitmentConfig = "tubbodeTang";
     if (gitmentConfig != "undefined") {
       var gitment = new Gitment({
-        id: "Echarts 之复合饼图的解决方案",
+        id: "【日课】 2019-3-17",
         owner: "tubbodeTang",
         repo: "tubbodeTang.github.io",
         oauth: {
