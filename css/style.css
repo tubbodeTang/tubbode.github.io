@@ -119,6 +119,9 @@ pre {
 .article-card:first-child {
   margin-top: 100px;
 }
+.diary-section:first-child {
+  margin-top: 100px;
+}
 h2.article-head {
   font-family: "微软雅黑";
   font-size: 1.2em;
