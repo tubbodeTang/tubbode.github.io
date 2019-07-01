@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="前端 UI">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" type="image/ico" href="/css/images/myLogo.png"/> 
+  <!-- 
+    <link rel="shortcut icon" type="image/ico" href="css/images/myLogo.png"/> 
+   -->
+  <title>
+    
+      工具推荐——Cmder | tubbodeTang
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/myLogo.jpg" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <!-- <div class="logo"></div> -->
+      <i class="iconfont">&#xe602;</i>
+      <span>Keep Fighting</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/diary/" class="item-link">Diary</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/diary/" class="menu-link">Diary</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>工具推荐——Cmder</h2>
+  <!-- <p class="post-date">08/10/2018</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><p>这两天坐地铁，听到站内广播：</p>
+<p>北京地铁站内不再开具纸质发票，有需要的乘客得去 「北京一卡通 APP」获取电子发票。</p>
+<p>得，无纸化了。</p>
+<p>这其实也算是城市无纸化办公模式的一个缩影。不知道大家注意过没有，现在很多发票都变成电子的了，申领操作也都可以通过网络以及各种电子设备进行。</p>
+<p>这也就从侧面反映出相比以前人们需要阅读大量的纸质文档，现在取而代之的是每天面对电脑、智能手机这些电子产品，我们每天都在接收、产生、传递着大量的电子化数据。</p>
+<p>作为一个前端码农，我们比普通人离这些电子化数据更近一些，每天都在和大量需要展示的数据打交道。但是，有些数据并不是拿来就能用的。</p>
+<p>由于各种各样的原因，我们每天工作的时间其实有一部分并不是在写代码，而是在整理这些未经处理不能拿来使用的数据。数据量小的话还好说，如果数据量大， 那简直要逼疯一个人啊！</p>
+<p>不过好在，我们是码农，遇到这种情况，第一个想到的就是：偷懒，这种重复又没有营养的工作，应当交给计算机去帮我们完成，我们的时间如此宝贵，还要用来多写几个 bug 呢。</p>
+<p>而这几天的我总是遇到上面说的「各种各样的原因」，所以也找到一些处理这些烦人数据的「偷懒」方法。想到以后可能还会源源不断的遇到这种事，而且大家在工作中难免也常会遇到，不如总结起来，形成一个栏目「程序员的 Tricks」，以后找的时候也方便一些。</p>
+<p>好了，扯了这么多，今天先分享第一个小 Trick 吧。</p>
+<hr>
+<p>情景：</p>
+<blockquote>
+<p>从一个放了 48 张 3M 左右大小照片的单页 PPT 中提取出所需要的照片。</p>
+</blockquote>
+<p>听起来就很变态，48 张大图放在一张 PPT ，真不知道提供数据的人怎么想的，我连打开这个 PPT 文档电脑都快卡的不能动了好吗？还让我一张一张的保存？</p>
+<p>登时我就快炸了，然而机（懒）智（惰）的我，立刻搜索到了化解尴尬的办法，骚操作走一波：</p>
+<p>有这样一个一页放了 N 多大图的 PPT</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5PeKVd3DiautU3axnH7DbIuNtFKGam8ZQeomicxf2wR7R1pjFxdczblnQ/640?tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="ppt" title="ppt"></p>
+<ol>
+<li>把 PPT 文件的后缀名改成压缩文件的后缀名「 .rar 」</li>
+</ol>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5awe6CPqeyeqC3ic5Yg5kIvBn02e7Rk460Ng6b38oyYETpSkVyLJ5Nsg/640?tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="rename" title="rename"></p>
+<ol>
+<li>把变成压缩文件的 PPT 解压到文件夹</li>
+</ol>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5sST1OwWibiao4mgjp6AmxkepOuxPHAxBveSqt04Kq922bR5eoMoJsZXg/640?tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="unzip" title="unzip"></p>
+<ol>
+<li>进入解压的文件夹，路径如下「 示例 &gt; ppt &gt; media 」，可以看到所有用在 PPT 中的图片，都在该文件夹中，直接按需获取即可</li>
+</ol>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5X5eiaicyHxzXgJjkIhtFgz0fSRmxxhHkovqKpPVib3R65CyrcwYjr7USg/640?tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="getAll" title="getAll"></p>
+<p>当然啦，这个方法不止适用于我遇到的这种变态情况，如果平时看到 PPT 中好的素材比较多，也可以通过这个方式来批量提取。</p>
+<p>还有更多的应用场景我就不赘述了，了解了这个方法，相信遇到别的情况之时，也能快速的想起并应用其中。</p>
+</section>
+    <!-- 
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Tools" >
+    <span class="tag-code">Tools</span>
+  </a>
+
+      </div>
+     -->
+    <!-- <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div> -->
+    <div class="time-tag">
+      <span>tubbodeTang</span>
+      <span>2018-08-10</span>
+    </div>
+
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    
+      <div id="comments"></div>
+    
+  </article>
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2018/08/10/程序员的 Tricks - 01/';
+    var banner = ''
+    if (banner) {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      var imageW = $(this).width()
+      var imageH = $(this).height()
+      
+      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+      zoom = zoom < 1 ? 1 : zoom
+      zoom = zoom > 2 ? 2 : zoom
+      var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+      $('.image-view-wrap').addClass('wrap-active')
+      $('.image-view-wrap img').css({
+        'width': `${imageW}`,
+        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+      })
+      $('html').css('overflow', 'hidden')
+
+      $('.image-view-wrap').on('click', function() {
+        $(this).remove()
+        $('html').attr('style', '')
+      })
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "tubbodeTang";
+    if (gitmentConfig != "undefined") {
+      var gitment = new Gitment({
+        id: "工具推荐——Cmder",
+        owner: "tubbodeTang",
+        repo: "tubbodeTang.github.io",
+        oauth: {
+          client_id: "2eb057f87192cbf561c3",
+          client_secret: "db8188fb69bd9075c92b9a0fc2efc659b4194d9c"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
+    <br>
+    based on <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
