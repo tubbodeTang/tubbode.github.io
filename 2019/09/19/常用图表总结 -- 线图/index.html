@@ -11,7 +11,7 @@
    -->
   <title>
     
-      Echarts 之复合饼图的解决方案 | tubbodeTang
+      常用图表总结——线图 | tubbodeTang
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -78,43 +78,65 @@
 </header>
 
     <div id="article-banner">
-  <h2>Echarts 之复合饼图的解决方案</h2>
-  <!-- <p class="post-date">05/22/2018</p> -->
+  <h2>常用图表总结——线图</h2>
+  <!-- <p class="post-date">09/19/2019</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
 </div>
 <main class="app-body">
   <article class="post-article">
-    <section class="markdown-content"><blockquote>
-<p>Echarts 是百度出品的功能强大的开源可视化库，由 Javascript 实现。<br>具有丰富的可视化类型，良好的跨平台特性，绚丽的视觉效果。<br>是大数据分析展示的有力武器</p>
-</blockquote>
-<p>老实说其实在我刚进入前端开发这个领域的时候就听说并使用了 Echarts ，那个时候还是 1.0 版本。</p>
-<p>最开始只是用到一些简单的条、饼、线图的组合展示，有时候我还会偷懒直接使用 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 的可视化功能进行操作，也还挺方便的，不用记那么多属性，但是现在 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 已经满足不了我更高级的需求了，有什么问题还是看文档更清晰。</p>
-<p>一直到今天，Echarts 已经出了 4.0 版本，功能和性能都有了非常的大的提升，也正因为这样，使用 Echarts 的人越来越多，Echarts 的社区也越来越活跃，活跃的社区又会促进 Echarts 生生不息的向前发展，形成一个良性循环。我想，这就是开源的魅力吧。</p>
-<p>最近在工作当中使用 Echarts 来深度挖掘和展示我手头的数据，发现有一个地方可能需要复合饼图来展示效果比较好。</p>
-<p>看了很多官方的实例，没有特别称手能直接拿来用的。GitHub 上 Echarts 的 Issues 区我也去搜了，看有没有人已经踩过坑。结果发现一天前，就有人提了一个和我一模一样的情景，问有没有用复合图来实现的方案，他也不知道怎么解决。</p>
-<p>哈哈，结果还是要靠自己了。</p>
-<p>于是乎看了一些 Echarts Gallery 上大家的奇思妙想之后，我也有了灵感。</p>
-<p>（这里穿插说一句，Echarts 升级之后社区真的变强了很多，不仅有很清晰的官方文档和实例，Gallery 里各方大神的脑洞也真的很精彩，比如我就看见过用 Echarts 做动画的，Flappy Bird，扫雷，还有一些酷炫的 3D 效果我就不说了，一打开那界面电脑风扇都开始呜呜响，哈哈，留待给以后慢慢发掘，有空专门再写一个收集贴。）</p>
-<h4 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h4><p>第一个方案是想画两个饼图，再用 series-&gt;type:graph 这个属性画两根线把两个饼图连起来。</p>
-<p>尝试了多次，发现不能通过点坐标的调整得到线的正确位置。我想要的是直角坐标，所以从直角坐标的角度看来，线的中心点是固定的，一直在 (0，0) ，不能上下左右移动。也就是说 y=kx+b 的 b 一直都是 0，只有线的斜率一直在变化，所以我判断那个坐标有可能是极坐标，所以才没有办法按直角坐标得到正确的结果。</p>
-<p>而且使用这种方式还有一个弊端，就是两个饼图连接点的坐标，其实不那么好确定，因为有可能随着百分比的变化而变化。所以最终，我放弃了这个方案。</p>
-<h4 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h4><p>换一个思路，采用之前在 Gallery 中看见过的环状图套饼图来实现。</p>
-<p>我看见过用透明环状饼区来占位的，这样看起来透明饼区就不存在了，只能看到不透明的饼区，刚好可以用来做展开的详细复合图。</p>
-<p>于是乎有了下面这个效果，具体代码实现和结果可以到 Gallery 里 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">查看</a>。</p>
-<p><img src="http://echarts.baidu.com/ecg-storage/img/xHJaWqD-1Q.png" alt="实现效果缩略图" title="实现效果缩略图"></p>
-<p>两个版本的思路出来效果之后，我都给了 GitHub Issues 上和我相同问题的那个哥们一个回复，他也回复了我，和大家一起思考问题的感觉还是很棒的。E []E</p>
-<p>我发表在 Gallery 里的 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">示例</a>，截至目前也已经有了二十多次的浏览量。</p>
-<p>这就是分享的力量，它不仅帮助别人，同时也在激励监督自己，让自己做的更好。</p>
-<p>这是我第一次体验到分享的乐趣，所以记录下来，鞭策自己以后更加努力！</p>
+    <section class="markdown-content"><p>上次我们总结了柱图，这次来说说线图吧。</p>
+<p>线图主要是用于展示连续变化的数据的变化趋势，既然是趋势，一般都会和时间扯上点关系，所以线图的横轴不会按类目来独立展示，一般只有一个变量就是时间。</p>
+<p>在折线图中，数据是递增还是递减、增减的速率、增减的规律（周期性、螺旋性等）、峰值等特征都可以清晰地反映出来。当有多组相关数据在同一张图中时，也可用来分析多组数据随时间变化的相互作用和相互影响。</p>
+<h4 id="最普通的线图"><a href="#最普通的线图" class="headerlink" title="最普通的线图"></a>最普通的线图</h4><p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_1.png?raw=true" alt="最普通的线图"></p>
+<p>为了美观，也可以把线改为平滑曲线</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_2.png?raw=true" alt="平滑曲线"></p>
+<h4 id="面积图"><a href="#面积图" class="headerlink" title="面积图"></a>面积图</h4><p>如果给上面这条线加上阴影，就变成了面积图，面积图由于填充了颜色，所以更能带给人视觉上的冲击。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_3.png?raw=true" alt="面积图"></p>
+<p>但是也要注意当对比多个类别数据的趋势时，最好把填色区域设置为带有透明度的颜色，否则就会像下图一样，发生重叠的情况，看不清楚。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_5.png?raw=true" alt=""></p>
+<p>设置了透明度之后，效果就会好一些。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_4.png?raw=true" alt=""></p>
+<p>不过尽管如此，当带有透明度的色块太多时也会发生层叠，导致不如单纯的线图看得清楚。</p>
+<h4 id="堆叠面积图"><a href="#堆叠面积图" class="headerlink" title="堆叠面积图"></a>堆叠面积图</h4><p>和柱图一样，将面积图堆叠起来，就可以获得堆叠面积图，它像堆叠柱图一样也可以来展示占比情况，原理其实和堆叠柱图差不多，都是因为堆叠代表了整体总和，这样就可以看出单个类目在总体中的占比。</p>
+<p>但和堆叠柱图相比，堆叠面积图依然突出了展示趋势变化的功能，即展示出了一段时间内，占比变化的趋势，而不仅仅是数量上的变化。</p>
+<p>比如下图中（数据纯属虚构），我们就可以看出通勤的步数在总体中的占比变化，周一到周五由于要工作，所以有通勤的贡献率，而到了周末，不用上班，所以通勤没有贡献率了；也可以看出周一到周五工作太繁忙，没有时间走路锻炼，这个时候总步数里根本没有运动这一项的份额。到了周末才有功夫出去走走路，锻炼一下，这个时候才有了运动的份额，而到了周日想到第二天要工作，就没有走的太远，份额又有下降。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_6.png?raw=true" alt="堆叠面积图"></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>展示数据数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线图</td>
+<td>最好不要超过 5 条线，不同曲线数据相近的时候尤其要注意是否方便区分</td>
+</tr>
+<tr>
+<td>面积图</td>
+<td>最好不要超过 5 条线，过多容易重叠</td>
+</tr>
+<tr>
+<td>堆叠面积图</td>
+<td>不要超过 12 种颜色块</td>
+</tr>
+</tbody>
+</table>
+<p>————————————</p>
+<p>P.S.</p>
+<p>想直接学习的可以搜「墨者学院」</p>
+<p>本文所有图表来自「Echarts」制作</p>
+<p>转载请注明出处</p>
 </section>
     <!-- 
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#Echarts" >
-    <span class="tag-code">Echarts</span>
+  <a href="/tags#Tools" >
+    <span class="tag-code">Tools</span>
   </a>
 
       </div>
@@ -137,7 +159,7 @@
     </div> -->
     <div class="time-tag">
       <span>tubbodeTang</span>
-      <span>2018-05-22</span>
+      <span>2019-09-19</span>
     </div>
 
     <div class="qrcode">
@@ -152,7 +174,7 @@
 
 <script>
   (function () {
-    var url = 'http://tubbodetang.github.io/2018/05/22/Echarts 之复合饼图的解决方案/';
+    var url = 'http://tubbodetang.github.io/2019/09/19/常用图表总结 -- 线图/';
     var banner = ''
     if (banner) {
       $('#article-banner').css({
@@ -203,7 +225,7 @@
     var gitmentConfig = "tubbodeTang";
     if (gitmentConfig != "undefined") {
       var gitment = new Gitment({
-        id: "Echarts 之复合饼图的解决方案",
+        id: "常用图表总结——线图",
         owner: "tubbodeTang",
         repo: "tubbodeTang.github.io",
         oauth: {

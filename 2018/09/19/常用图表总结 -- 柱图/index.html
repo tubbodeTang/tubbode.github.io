@@ -11,7 +11,7 @@
    -->
   <title>
     
-      Echarts 之复合饼图的解决方案 | tubbodeTang
+      常用图表总结——柱图 | tubbodeTang
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -78,43 +78,93 @@
 </header>
 
     <div id="article-banner">
-  <h2>Echarts 之复合饼图的解决方案</h2>
-  <!-- <p class="post-date">05/22/2018</p> -->
+  <h2>常用图表总结——柱图</h2>
+  <!-- <p class="post-date">09/19/2018</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
 </div>
 <main class="app-body">
   <article class="post-article">
-    <section class="markdown-content"><blockquote>
-<p>Echarts 是百度出品的功能强大的开源可视化库，由 Javascript 实现。<br>具有丰富的可视化类型，良好的跨平台特性，绚丽的视觉效果。<br>是大数据分析展示的有力武器</p>
-</blockquote>
-<p>老实说其实在我刚进入前端开发这个领域的时候就听说并使用了 Echarts ，那个时候还是 1.0 版本。</p>
-<p>最开始只是用到一些简单的条、饼、线图的组合展示，有时候我还会偷懒直接使用 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 的可视化功能进行操作，也还挺方便的，不用记那么多属性，但是现在 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 已经满足不了我更高级的需求了，有什么问题还是看文档更清晰。</p>
-<p>一直到今天，Echarts 已经出了 4.0 版本，功能和性能都有了非常的大的提升，也正因为这样，使用 Echarts 的人越来越多，Echarts 的社区也越来越活跃，活跃的社区又会促进 Echarts 生生不息的向前发展，形成一个良性循环。我想，这就是开源的魅力吧。</p>
-<p>最近在工作当中使用 Echarts 来深度挖掘和展示我手头的数据，发现有一个地方可能需要复合饼图来展示效果比较好。</p>
-<p>看了很多官方的实例，没有特别称手能直接拿来用的。GitHub 上 Echarts 的 Issues 区我也去搜了，看有没有人已经踩过坑。结果发现一天前，就有人提了一个和我一模一样的情景，问有没有用复合图来实现的方案，他也不知道怎么解决。</p>
-<p>哈哈，结果还是要靠自己了。</p>
-<p>于是乎看了一些 Echarts Gallery 上大家的奇思妙想之后，我也有了灵感。</p>
-<p>（这里穿插说一句，Echarts 升级之后社区真的变强了很多，不仅有很清晰的官方文档和实例，Gallery 里各方大神的脑洞也真的很精彩，比如我就看见过用 Echarts 做动画的，Flappy Bird，扫雷，还有一些酷炫的 3D 效果我就不说了，一打开那界面电脑风扇都开始呜呜响，哈哈，留待给以后慢慢发掘，有空专门再写一个收集贴。）</p>
-<h4 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h4><p>第一个方案是想画两个饼图，再用 series-&gt;type:graph 这个属性画两根线把两个饼图连起来。</p>
-<p>尝试了多次，发现不能通过点坐标的调整得到线的正确位置。我想要的是直角坐标，所以从直角坐标的角度看来，线的中心点是固定的，一直在 (0，0) ，不能上下左右移动。也就是说 y=kx+b 的 b 一直都是 0，只有线的斜率一直在变化，所以我判断那个坐标有可能是极坐标，所以才没有办法按直角坐标得到正确的结果。</p>
-<p>而且使用这种方式还有一个弊端，就是两个饼图连接点的坐标，其实不那么好确定，因为有可能随着百分比的变化而变化。所以最终，我放弃了这个方案。</p>
-<h4 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h4><p>换一个思路，采用之前在 Gallery 中看见过的环状图套饼图来实现。</p>
-<p>我看见过用透明环状饼区来占位的，这样看起来透明饼区就不存在了，只能看到不透明的饼区，刚好可以用来做展开的详细复合图。</p>
-<p>于是乎有了下面这个效果，具体代码实现和结果可以到 Gallery 里 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">查看</a>。</p>
-<p><img src="http://echarts.baidu.com/ecg-storage/img/xHJaWqD-1Q.png" alt="实现效果缩略图" title="实现效果缩略图"></p>
-<p>两个版本的思路出来效果之后，我都给了 GitHub Issues 上和我相同问题的那个哥们一个回复，他也回复了我，和大家一起思考问题的感觉还是很棒的。E []E</p>
-<p>我发表在 Gallery 里的 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">示例</a>，截至目前也已经有了二十多次的浏览量。</p>
-<p>这就是分享的力量，它不仅帮助别人，同时也在激励监督自己，让自己做的更好。</p>
-<p>这是我第一次体验到分享的乐趣，所以记录下来，鞭策自己以后更加努力！</p>
+    <section class="markdown-content"><p>最近工作上遇到很多图表展示的情景，很多时候我们都会被长得类似的图表或者多种图一起用的情况给弄懵，一时间不知道图表究竟要传达怎样的含义，为了更好的使用图表传达我想要的效果，我在「墨者学院」上学习了一些相关内容。</p>
+<p>虽然蚂蚁金服团队总结的已经比较完善了，但对我来说，「墨者学院」有一个很大的问题就是它是按照图表的功能来进行分类的，而有些图表是有多个功能的，这样的话在很多分类中都能看到重复的图表，我觉得稍微有些乱，所以就来自己总结一下。</p>
+<p>先从最基础也是用的最多的几类图表开始总结吧，很多玫瑰图啊之类的其实平时用到的场景远没有基础的几类图表多。</p>
+<p>能用好、用对、读对几类基础的图表已经很厉害了。</p>
+<p>今天是各种柱状图的主场。</p>
+<p>首先要明确一点，柱状图一般都是用来展示对比数量的，通过柱子的长短，来代表数量的多少。</p>
+<p>只有在极少数的情况，柱子才用来展示占比情况，比如后面要说的堆叠柱状图。</p>
+<h3 id="最普通的柱图"><a href="#最普通的柱图" class="headerlink" title="最普通的柱图"></a>最普通的柱图</h3><p><img src="https://github.com/tubbodeTang/PicBed/blob/master/bar_1.png?raw=true" alt="普通柱图"></p>
+<p>最普通的柱图相信每个人都很熟悉了，它是一种使用垂直或水平的柱子来显示类别之间数值比较的图表。其中一个轴表示需要对比的分类（通常是 X 轴），另一个轴代表相应的数值（通常是 Y 轴）。</p>
+<p>在柱子比较多的情况下，一般会使用水平的柱子，由于人们从左至右、从上至下的阅读习惯，这样做能避免由于数据量大而不便于阅读图的弊端。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/bar_2.png?raw=true" alt="柱图横竖对比"></p>
+<h3 id="柱图的引申"><a href="#柱图的引申" class="headerlink" title="柱图的引申"></a>柱图的引申</h3><h4 id="1-分组柱状图"><a href="#1-分组柱状图" class="headerlink" title="1.分组柱状图"></a>1.分组柱状图</h4><p>分组柱状图经常用于不同组间数据的比较，这些组都包含了相同分类的数据。</p>
+<p>可以用来对比不同分组内相同分类的大小，或者用来对比相同分组内不同分类的大小。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/bar_3.png?raw=true" alt="分组柱状图"></p>
+<h4 id="2-堆叠柱状图"><a href="#2-堆叠柱状图" class="headerlink" title="2.堆叠柱状图"></a>2.堆叠柱状图</h4><p>与并排显示分类的分组柱状图不同，堆叠柱状图将每个柱子进行分割以显示相同类型下各个数据的大小情况。</p>
+<p>它可以形象的展示一个大分类包含的每个小分类的数据，以及各个小分类的占比，显示的是单个项目与整体之间的关系。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/bar_4.png?raw=true" alt="堆叠柱状图"></p>
+<h4 id="3-双向柱状图"><a href="#3-双向柱状图" class="headerlink" title="3.双向柱状图"></a>3.双向柱状图</h4><p>双向柱状图，使用正向和反向的柱子显示类别之间的数值比较，可以明显的区分出两种方向，一般用的都是水平柱子。使用不同颜色的柱子，可以使反差更大一些。</p>
+<p>常见的收支图就是一种双向柱状图。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/bar_5.png?raw=true" alt="双向柱状图"></p>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>上面初步介绍了一下今天登场的柱图们，为了对它们的适用情景和注意的地方有个更明晰的认识，我总结了下面这张表格作为最终的对比，全是干货。</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>适合场景</th>
+<th>不适用的情况</th>
+<th>数据量</th>
+<th>注意的地方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通柱状图</td>
+<td><strong>对比</strong>同类型数据不同分组的数据大小、多少，只有一个类型的展示</td>
+<td>不适合用于趋势的展示</td>
+<td>最好展示10-30组数据</td>
+<td>10组数据左右且分组名不太长的时候可以采用横向排列的柱图<br>超过10组最好使用纵向排列的柱图，便于读者阅读分组名</td>
+</tr>
+<tr>
+<td>分组柱状图</td>
+<td><strong>对比</strong>多个类型数据在不同分组的数据大小、多少，同时还能对比同一分组内不同类型数据的多少</td>
+<td>不适用于查看分组的总体数量</td>
+<td>由于分组中的类型可能比较多，所以这种方式建议：分组数控制在10个左右<br>类型数控制在5个左右</td>
+<td>分组数多的情况建议纵向排列</td>
+</tr>
+<tr>
+<td>堆叠柱状图</td>
+<td><strong>对比</strong>多个类型数据在本分组中的数据大小、多少、占比情况，同时还能观察到分组的总体数量</td>
+<td>由于基准线不同，不适用在分组间进行多个类型数据的对比</td>
+<td>同上</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>双向柱状图</td>
+<td>适用于<strong>对比</strong>存在反向互斥类型数据在本分组中的数据大小、多少、占比情况，在互斥条件处的数据反向分布，对比更加强烈</td>
+<td>不适用于没有反向互斥含义的情形展示</td>
+<td>同上</td>
+<td>一般都是纵向排列</td>
+</tr>
+</tbody>
+</table>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>以上几种柱图之间，其实又可以互相组合展示，变成比较复杂的复合柱图，这种图所包含的信息量就比较大了，看着高大上，读起来也会费劲一些。</p>
+<p>比如说上面的收支图，其实是双向柱图和分组柱图的结合。</p>
+<p>而下面这张图，又是分组柱图和堆叠柱图的结合了。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/bar_6.png?raw=true" alt="扩展组合"></p>
+<p>这种扩展就比较灵活了，依照情景按需组合使用就可以了，不过也要注意读图的难易程度，不要做得过于复杂，让读者看不懂。</p>
+<p>————————————</p>
+<p>P.S.</p>
+<p>想直接学习的可以搜「墨者学院」</p>
+<p>本文所有图表来自「Echarts」制作</p>
+<p>转载请注明出处</p>
 </section>
     <!-- 
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#Echarts" >
-    <span class="tag-code">Echarts</span>
+  <a href="/tags#Tools" >
+    <span class="tag-code">Tools</span>
   </a>
 
       </div>
@@ -137,7 +187,7 @@
     </div> -->
     <div class="time-tag">
       <span>tubbodeTang</span>
-      <span>2018-05-22</span>
+      <span>2018-09-19</span>
     </div>
 
     <div class="qrcode">
@@ -152,7 +202,7 @@
 
 <script>
   (function () {
-    var url = 'http://tubbodetang.github.io/2018/05/22/Echarts 之复合饼图的解决方案/';
+    var url = 'http://tubbodetang.github.io/2018/09/19/常用图表总结 -- 柱图/';
     var banner = ''
     if (banner) {
       $('#article-banner').css({
@@ -203,7 +253,7 @@
     var gitmentConfig = "tubbodeTang";
     if (gitmentConfig != "undefined") {
       var gitment = new Gitment({
-        id: "Echarts 之复合饼图的解决方案",
+        id: "常用图表总结——柱图",
         owner: "tubbodeTang",
         repo: "tubbodeTang.github.io",
         oauth: {
