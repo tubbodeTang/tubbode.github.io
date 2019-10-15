@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="前端 UI">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" type="image/ico" href="/css/images/myLogo.png"/> 
+  <!-- 
+    <link rel="shortcut icon" type="image/ico" href="css/images/myLogo.png"/> 
+   -->
+  <title>
+    
+      我的 Hexo 博客进阶（一） | tubbodeTang
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <!-- <img src="/css/images/myLogo.jpg" /> -->
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <!-- <div class="logo"></div> -->
+      <i class="iconfont">&#xe602;</i>
+      <span>Keep Fighting</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>我的 Hexo 博客进阶（一）</h2>
+  <!-- <p class="post-date">07/02/2019</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><p><a href="www.tubbodetang.site/2017/09/02/Hexo 博客搭建/">Hexo 博客搭建</a> 这篇文章已经讲了如何借助 Hexo 搭建一个静态博客，目前我们的博客已经有了属于我们的内容和样式风格，也可以借助 GitHub 的 Pages 功能在互联网上访问到了，那么如何才能让我们的博客写起来效率更高，更高大上呢？</p>
+<h4 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h4><p>用 Markdown 写博客，有一个最不好处理的地方就是，插入图片的时候，图片的地址链接不好做。</p>
+<p>图床就是为了储存我们的图片，并且生成可以在互联网上任意访问的服务器地址的，有了服务器地址，我们储存在图床的每一个图片，就都有自己专属的地址链接了。</p>
+<h5 id="图床的选择"><a href="#图床的选择" class="headerlink" title="图床的选择"></a>图床的选择</h5><p>图床其实也有很多的解决方案，甚至有很多免费的图床，但是免费总有一定的风险：</p>
+<ul>
+<li>指不定哪天就停止维护了（对于个人维护的图床站尤其如此）</li>
+<li>有可能突然加了防外链，让我们的图片无法访问（比如简书、微博图床以前可用，现在都不能用了）</li>
+</ul>
+<p>所以我们这里还是建议使用付费的大品牌存储来建立私人图床，可以相对稳定一些，不用担心未来的迁移成本。</p>
+<p>付费图床比如：</p>
+<ul>
+<li>腾讯 COS 储存</li>
+<li>阿里云 OSS 储存（目前收费是这几个里最贵的）</li>
+<li>七牛云（提供的测试地址只能使用 30 天，后续用得绑定已备案域名，有些麻烦）</li>
+<li>又拍云</li>
+</ul>
+<p>我这里由于一些其他问题，暂时注册了图床空间但还没有开始使用，所以对具体的图床建立方式就不介绍了。</p>
+<h5 id="图床工具"><a href="#图床工具" class="headerlink" title="图床工具"></a>图床工具</h5><p>有了专属的图床空间之后，我们还需要一个便捷的上传、生成链接的工具来配合我们日常使用，否则手动一张一张传照片再一张一张复制地址，就很让人心累了。</p>
+<p>图床工具也有很多，甚至让人眼花缭乱，而且根据不同数据储存服务商提供的 API 我们自己也能写一些小工具，不过这样就很费事了，喜欢折腾的同学可以多试试，我这里只分享两个使用的人比较多，我个人也比较喜欢的：</p>
+<ul>
+<li><a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="external">PicGo</a>（Windows）</li>
+<li><a href="https://toolinbox.net/iPic/" target="_blank" rel="external">iPic</a>（MacOS）。</li>
+</ul>
+<p>可以点击链接看看官方文档配置使用，配置都比较简单，不难上手。因为是个人开发，觉得做得好的朋友可以给他们点赞支持，这样我们才能一直有好用的软件用，省的自己造轮子。</p>
+<h5 id="我的图床搭建"><a href="#我的图床搭建" class="headerlink" title="我的图床搭建"></a>我的图床搭建</h5><p>我因为一直在用 Windows 环境工作，所以自然选择 PicGo 作为我的图床工具。PicGo 中还贴心的提供了 GitHub 图床的上传方式，由于我目前还无法使用付费的图床空间，所以刚好配合 PicGo 用 GitHub 仓库建立了一个图床。</p>
+<p><a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github图床" target="_blank" rel="external">GitHub 图床搭建，配合 PicGo 使用的方法</a></p>
+<p>这个方式也是免费的，相对也稳定，但最可怕的就是，GitHub 国内访问有时很慢，还有一定的 404 风险，所以后期我也会尽快更换付费图床的。到时候再对图床的搭建这一部分进行更新。</p>
+<h4 id="域名的购买以及关联"><a href="#域名的购买以及关联" class="headerlink" title="域名的购买以及关联"></a>域名的购买以及关联</h4><p>使用 GitHub Pages 功能搭建博客之后，默认的地址都是 github.io 这样的形式，虽然说不是不能用，但是就是看起来有点低级，不太像属于个人的博客，倒像是属于 GitHub 的博客。</p>
+<p>所以有条件的朋友，可以挑选一个属于自己的域名，然后关联到 GitHub 博客，这样的话，其他人看到我们的博客就更具有我们个人的品牌色彩了。</p>
+<p>暂时没有打算关联域名的朋友，就不用看这一部分的内容了。</p>
+<h5 id="域名的购买"><a href="#域名的购买" class="headerlink" title="域名的购买"></a>域名的购买</h5><p>我是在阿里云买的，也可以去腾讯云等等其他出售域名的网站购买。</p>
+<p>购买前先挑一个自己中意的，然后搜索一下是否可用，就可以加入购物车付费购买了，和淘宝一个流程。不同的域名价格也不同，有的还有连续购买多年的优惠活动，还有一些网站会举办新用户赠送一年免费域名这种活动，都可以了解一下，然后做个对比，选择一个最适合自己的就可以了。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_1.png?raw=true" alt="阿里云域名购买"></p>
+<h5 id="域名的关联"><a href="#域名的关联" class="headerlink" title="域名的关联"></a>域名的关联</h5><p>有了域名之后，我们还要对域名进行实名认证，没有认证的域名状态会显示未认证，无法正常使用，这一步也很简单，只要上传一下身份证信息，几分钟之后就可以认证成功了。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2.png?raw=true" alt="域名认证"></p>
+<p>然后我们对域名添加解析，解析到自己 GitHub Pages 博客的 IP 地址。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_3.png?raw=true" alt="添加解析"></p>
+<p>过几分钟之后在 GitHub 的配置中，可以看到已经关联到了我们的域名。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_4.png?raw=true" alt=""></p>
+<p>此时再访问我们的域名，就可以看到博客已经可以直接通过域名打开了。</p>
+<p><em>关于备案的小知识</em></p>
+<p>购买域名的很多搜索结果里都会说到备案这件事。那么我们的域名没有经过备案可以用吗？会不会因为没有备案就产生什么问题呢？</p>
+<p>其实备案主要是针对网站备案，域名只是网站的“代号”而已，所以其实域名是不存在备案一说的，对域名的备案只是对网站备案的简称罢了。</p>
+<p>GitHub 博客是放在 GitHub 的国外服务器的，所以不用备案，博客也可以正常使用。</p>
+<p>如果你还想把博客建立在自己购买的服务器上，不用 GitHub 的 Pages 服务，就要对自己购买的服务器进行备案建站，然后关联域名，这个时候，你的域名也相当于已经备过案了。</p>
+<p>但是，环境特殊，我们还是注意不要写不该写的内容。否则有一天被 404 了，就真的需要自己买服务器建站写博客了，随之而来也有很高的迁移成本。</p>
+</section>
+    <!-- 
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#博客搭建" >
+    <span class="tag-code">博客搭建</span>
+  </a>
+
+      </div>
+     -->
+    <!-- <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div> -->
+    <div class="time-tag">
+      <span>tubbodeTang</span>
+      <span>2019-07-02</span>
+    </div>
+
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    
+      <div id="comments"></div>
+    
+  </article>
+</main>
+
+<script>
+  (function () {
+    var url = 'http://www.tubbodetang.site/posts/62063/';
+    var banner = ''
+    if (banner) {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      var imageW = $(this).width()
+      var imageH = $(this).height()
+      
+      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+      zoom = zoom < 1 ? 1 : zoom
+      zoom = zoom > 2 ? 2 : zoom
+      var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+      $('.image-view-wrap').addClass('wrap-active')
+      $('.image-view-wrap img').css({
+        'width': `${imageW}`,
+        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+      })
+      $('html').css('overflow', 'hidden')
+
+      $('.image-view-wrap').on('click', function() {
+        $(this).remove()
+        $('html').attr('style', '')
+      })
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "tubbodeTang";
+    if (gitmentConfig != "undefined") {
+      var gitment = new Gitment({
+        id: "我的 Hexo 博客进阶（一）",
+        owner: "tubbodeTang",
+        repo: "tubbodeTang.github.io",
+        oauth: {
+          client_id: "2eb057f87192cbf561c3",
+          client_secret: "db8188fb69bd9075c92b9a0fc2efc659b4194d9c"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
+    <br>
+    based on <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

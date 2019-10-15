@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="前端 UI">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" type="image/ico" href="/css/images/myLogo.png"/> 
+  <!-- 
+    <link rel="shortcut icon" type="image/ico" href="css/images/myLogo.png"/> 
+   -->
+  <title>
+    
+      Echarts 之复合饼图的解决方案 | tubbodeTang
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <!-- <img src="/css/images/myLogo.jpg" /> -->
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <!-- <div class="logo"></div> -->
+      <i class="iconfont">&#xe602;</i>
+      <span>Keep Fighting</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Echarts 之复合饼图的解决方案</h2>
+  <!-- <p class="post-date">05/22/2018</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<p>Echarts 是百度出品的功能强大的开源可视化库，由 Javascript 实现。<br>具有丰富的可视化类型，良好的跨平台特性，绚丽的视觉效果。<br>是大数据分析展示的有力武器</p>
+</blockquote>
+<p>老实说其实在我刚进入前端开发这个领域的时候就听说并使用了 Echarts ，那个时候还是 1.0 版本。</p>
+<p>最开始只是用到一些简单的条、饼、线图的组合展示，有时候我还会偷懒直接使用 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 的可视化功能进行操作，也还挺方便的，不用记那么多属性，但是现在 <a href="http://tushuo.baidu.com/" target="_blank" rel="external">图说</a> 已经满足不了我更高级的需求了，有什么问题还是看文档更清晰。</p>
+<p>一直到今天，Echarts 已经出了 4.0 版本，功能和性能都有了非常的大的提升，也正因为这样，使用 Echarts 的人越来越多，Echarts 的社区也越来越活跃，活跃的社区又会促进 Echarts 生生不息的向前发展，形成一个良性循环。我想，这就是开源的魅力吧。</p>
+<p>最近在工作当中使用 Echarts 来深度挖掘和展示我手头的数据，发现有一个地方可能需要复合饼图来展示效果比较好。</p>
+<p>看了很多官方的实例，没有特别称手能直接拿来用的。GitHub 上 Echarts 的 Issues 区我也去搜了，看有没有人已经踩过坑。结果发现一天前，就有人提了一个和我一模一样的情景，问有没有用复合图来实现的方案，他也不知道怎么解决。</p>
+<p>哈哈，结果还是要靠自己了。</p>
+<p>于是乎看了一些 Echarts Gallery 上大家的奇思妙想之后，我也有了灵感。</p>
+<p>（这里穿插说一句，Echarts 升级之后社区真的变强了很多，不仅有很清晰的官方文档和实例，Gallery 里各方大神的脑洞也真的很精彩，比如我就看见过用 Echarts 做动画的，Flappy Bird，扫雷，还有一些酷炫的 3D 效果我就不说了，一打开那界面电脑风扇都开始呜呜响，哈哈，留待给以后慢慢发掘，有空专门再写一个收集贴。）</p>
+<h4 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h4><p>第一个方案是想画两个饼图，再用 series-&gt;type:graph 这个属性画两根线把两个饼图连起来。</p>
+<p>尝试了多次，发现不能通过点坐标的调整得到线的正确位置。我想要的是直角坐标，所以从直角坐标的角度看来，线的中心点是固定的，一直在 (0，0) ，不能上下左右移动。也就是说 y=kx+b 的 b 一直都是 0，只有线的斜率一直在变化，所以我判断那个坐标有可能是极坐标，所以才没有办法按直角坐标得到正确的结果。</p>
+<p>而且使用这种方式还有一个弊端，就是两个饼图连接点的坐标，其实不那么好确定，因为有可能随着百分比的变化而变化。所以最终，我放弃了这个方案。</p>
+<h4 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h4><p>换一个思路，采用之前在 Gallery 中看见过的环状图套饼图来实现。</p>
+<p>我看见过用透明环状饼区来占位的，这样看起来透明饼区就不存在了，只能看到不透明的饼区，刚好可以用来做展开的详细复合图。</p>
+<p>于是乎有了下面这个效果，具体代码实现和结果可以到 Gallery 里 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">查看</a>。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/echart_complexpie.png?raw=true" alt="实现效果图"></p>
+<p>两个版本的思路出来效果之后，我都给了 GitHub Issues 上和我相同问题的那个哥们一个回复，他也回复了我，和大家一起思考问题的感觉还是很棒的。E []E</p>
+<p>我发表在 Gallery 里的 <a href="http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q" target="_blank" rel="external">示例</a>，截至目前也已经有了二十多次的浏览量。</p>
+<p>这就是分享的力量，它不仅帮助别人，同时也在激励监督自己，让自己做的更好。</p>
+<p>这是我第一次体验到分享的乐趣，所以记录下来，鞭策自己以后更加努力！</p>
+</section>
+    <!-- 
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Echarts" >
+    <span class="tag-code">Echarts</span>
+  </a>
+
+      </div>
+     -->
+    <!-- <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div> -->
+    <div class="time-tag">
+      <span>tubbodeTang</span>
+      <span>2018-05-22</span>
+    </div>
+
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    
+      <div id="comments"></div>
+    
+  </article>
+</main>
+
+<script>
+  (function () {
+    var url = 'http://www.tubbodetang.site/posts/38946/';
+    var banner = ''
+    if (banner) {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      var imageW = $(this).width()
+      var imageH = $(this).height()
+      
+      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+      zoom = zoom < 1 ? 1 : zoom
+      zoom = zoom > 2 ? 2 : zoom
+      var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+      $('.image-view-wrap').addClass('wrap-active')
+      $('.image-view-wrap img').css({
+        'width': `${imageW}`,
+        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+      })
+      $('html').css('overflow', 'hidden')
+
+      $('.image-view-wrap').on('click', function() {
+        $(this).remove()
+        $('html').attr('style', '')
+      })
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "tubbodeTang";
+    if (gitmentConfig != "undefined") {
+      var gitment = new Gitment({
+        id: "Echarts 之复合饼图的解决方案",
+        owner: "tubbodeTang",
+        repo: "tubbodeTang.github.io",
+        oauth: {
+          client_id: "2eb057f87192cbf561c3",
+          client_secret: "db8188fb69bd9075c92b9a0fc2efc659b4194d9c"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
+    <br>
+    based on <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
