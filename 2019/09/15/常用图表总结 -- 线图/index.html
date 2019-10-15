@@ -11,7 +11,7 @@
    -->
   <title>
     
-      程序员的 Tricks - 01 | tubbodeTang
+      常用图表总结——线图 | tubbodeTang
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -78,47 +78,58 @@
 </header>
 
     <div id="article-banner">
-  <h2>程序员的 Tricks - 01</h2>
-  <!-- <p class="post-date">08/10/2018</p> -->
+  <h2>常用图表总结——线图</h2>
+  <!-- <p class="post-date">09/15/2019</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
 </div>
 <main class="app-body">
   <article class="post-article">
-    <section class="markdown-content"><p>这两天坐地铁，听到站内广播：</p>
-<p>北京地铁站内不再开具纸质发票，有需要的乘客得去 「北京一卡通 APP」获取电子发票。</p>
-<p>得，无纸化了。</p>
-<p>这其实也算是城市无纸化办公模式的一个缩影。不知道大家注意过没有，现在很多发票都变成电子的了，申领操作也都可以通过网络以及各种电子设备进行。</p>
-<p>这也就从侧面反映出相比以前人们需要阅读大量的纸质文档，现在取而代之的是每天面对电脑、智能手机这些电子产品，我们每天都在接收、产生、传递着大量的电子化数据。</p>
-<p>作为一个前端码农，我们比普通人离这些电子化数据更近一些，每天都在和大量需要展示的数据打交道。但是，有些数据并不是拿来就能用的。</p>
-<p>由于各种各样的原因，我们每天工作的时间其实有一部分并不是在写代码，而是在整理这些未经处理不能拿来使用的数据。数据量小的话还好说，如果数据量大， 那简直要逼疯一个人啊！</p>
-<p>不过好在，我们是码农，遇到这种情况，第一个想到的就是：偷懒，这种重复又没有营养的工作，应当交给计算机去帮我们完成，我们的时间如此宝贵，还要用来多写几个 bug 呢。</p>
-<p>而这几天的我总是遇到上面说的「各种各样的原因」，所以也找到一些处理这些烦人数据的「偷懒」方法。想到以后可能还会源源不断的遇到这种事，而且大家在工作中难免也常会遇到，不如总结起来，形成一个栏目「程序员的 Tricks」，以后找的时候也方便一些。</p>
-<p>好了，扯了这么多，今天先分享第一个小 Trick 吧。</p>
-<hr>
-<p>情景：</p>
-<blockquote>
-<p>从一个放了 48 张 3M 左右大小照片的单页 PPT 中提取出所需要的照片。</p>
-</blockquote>
-<p>听起来就很变态，48 张大图放在一张 PPT ，真不知道提供数据的人怎么想的，我连打开这个 PPT 文档电脑都快卡的不能动了好吗？还让我一张一张的保存？</p>
-<p>登时我就快炸了，然而机（懒）智（惰）的我，立刻搜索到了化解尴尬的办法，骚操作走一波：</p>
-<p>有这样一个一页放了 N 多大图的 PPT</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/trick_1_1.png?raw=true" alt="ppt"></p>
-<ol>
-<li>把 PPT 文件的后缀名改成压缩文件的后缀名「 .rar 」</li>
-</ol>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/trick_1_2.png?raw=true" alt="rename"></p>
-<ol>
-<li>把变成压缩文件的 PPT 解压到文件夹</li>
-</ol>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/trick_1_3.png?raw=true" alt="unzip"></p>
-<ol>
-<li>进入解压的文件夹，路径如下「 示例 &gt; ppt &gt; media 」，可以看到所有用在 PPT 中的图片，都在该文件夹中，直接按需获取即可</li>
-</ol>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/trick_1_4.png?raw=true" alt="getAll"></p>
-<p>当然啦，这个方法不止适用于我遇到的这种变态情况，如果平时看到 PPT 中好的素材比较多，也可以通过这个方式来批量提取。</p>
-<p>还有更多的应用场景我就不赘述了，了解了这个方法，相信遇到别的情况之时，也能快速的想起并应用其中。</p>
+    <section class="markdown-content"><p>上次我们总结了柱图，这次来说说线图吧。</p>
+<p>线图主要是用于展示连续变化的数据的变化趋势，既然是趋势，一般都会和时间扯上点关系，所以线图的横轴不会按类目来独立展示，一般只有一个变量就是时间。</p>
+<p>在折线图中，数据是递增还是递减、增减的速率、增减的规律（周期性、螺旋性等）、峰值等特征都可以清晰地反映出来。当有多组相关数据在同一张图中时，也可用来分析多组数据随时间变化的相互作用和相互影响。</p>
+<h4 id="最普通的线图"><a href="#最普通的线图" class="headerlink" title="最普通的线图"></a>最普通的线图</h4><p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_1.png?raw=true" alt="最普通的线图"></p>
+<p>为了美观，也可以把线改为平滑曲线</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_2.png?raw=true" alt="平滑曲线"></p>
+<h4 id="面积图"><a href="#面积图" class="headerlink" title="面积图"></a>面积图</h4><p>如果给上面这条线加上阴影，就变成了面积图，面积图由于填充了颜色，所以更能带给人视觉上的冲击。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_3.png?raw=true" alt="面积图"></p>
+<p>但是也要注意当对比多个类别数据的趋势时，最好把填色区域设置为带有透明度的颜色，否则就会像下图一样，发生重叠的情况，看不清楚。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_5.png?raw=true" alt=""></p>
+<p>设置了透明度之后，效果就会好一些。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_4.png?raw=true" alt=""></p>
+<p>不过尽管如此，当带有透明度的色块太多时也会发生层叠，导致不如单纯的线图看得清楚。</p>
+<h4 id="堆叠面积图"><a href="#堆叠面积图" class="headerlink" title="堆叠面积图"></a>堆叠面积图</h4><p>和柱图一样，将面积图堆叠起来，就可以获得堆叠面积图，它像堆叠柱图一样也可以来展示占比情况，原理其实和堆叠柱图差不多，都是因为堆叠代表了整体总和，这样就可以看出单个类目在总体中的占比。</p>
+<p>但和堆叠柱图相比，堆叠面积图依然突出了展示趋势变化的功能，即展示出了一段时间内，占比变化的趋势，而不仅仅是数量上的变化。</p>
+<p>比如下图中（数据纯属虚构），我们就可以看出通勤的步数在总体中的占比变化，周一到周五由于要工作，所以有通勤的贡献率，而到了周末，不用上班，所以通勤没有贡献率了；也可以看出周一到周五工作太繁忙，没有时间走路锻炼，这个时候总步数里根本没有运动这一项的份额。到了周末才有功夫出去走走路，锻炼一下，这个时候才有了运动的份额，而到了周日想到第二天要工作，就没有走的太远，份额又有下降。</p>
+<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/line_6.png?raw=true" alt="堆叠面积图"></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>展示数据数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线图</td>
+<td>最好不要超过 5 条线，不同曲线数据相近的时候尤其要注意是否方便区分</td>
+</tr>
+<tr>
+<td>面积图</td>
+<td>最好不要超过 5 条线，过多容易重叠</td>
+</tr>
+<tr>
+<td>堆叠面积图</td>
+<td>不要超过 12 种颜色块</td>
+</tr>
+</tbody>
+</table>
+<p>————————————</p>
+<p>P.S.</p>
+<p>想直接学习的可以搜「墨者学院」</p>
+<p>本文所有图表来自「Echarts」制作</p>
+<p>转载请注明出处</p>
 </section>
     <!-- 
       <div class="tags">
@@ -148,7 +159,7 @@
     </div> -->
     <div class="time-tag">
       <span>tubbodeTang</span>
-      <span>2018-08-10</span>
+      <span>2019-09-15</span>
     </div>
 
     <div class="qrcode">
@@ -163,7 +174,7 @@
 
 <script>
   (function () {
-    var url = 'http://www.tubbodetang.site/2018/08/10/程序员的 Tricks - 01/';
+    var url = 'http://www.tubbodetang.site/2019/09/15/常用图表总结 -- 线图/';
     var banner = ''
     if (banner) {
       $('#article-banner').css({
@@ -214,7 +225,7 @@
     var gitmentConfig = "tubbodeTang";
     if (gitmentConfig != "undefined") {
       var gitment = new Gitment({
-        id: "程序员的 Tricks - 01",
+        id: "常用图表总结——线图",
         owner: "tubbodeTang",
         repo: "tubbodeTang.github.io",
         oauth: {
