@@ -90,7 +90,7 @@
 <p>这一篇主要还是针对搜索方面的小优化，其实针对搜索引擎进行站点的优化也是一门高深的学问，它就是 SEO，作为个人博我在这方面没有特别深究，经常是搜索其它问题的时候看到别人为自己的站点折腾了好多，觉得自己的博客也确实在某些方面存在不足，才想到要站在其他人的肩膀上去模仿着做的。</p>
 <h4 id="优化页面地址"><a href="#优化页面地址" class="headerlink" title="优化页面地址"></a>优化页面地址</h4><p>据说层级越少，被搜索引擎爬取到的概率越大，那么 Hexo 博客默认的设置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></div></pre></td></tr></table></figure>
-<p>最后生成的页面地址 <code>年/月/日/标题</code> 就层级太多，太简陋，太难看了。不由得让我漏出了嫌弃的表情。</p>
+<p>最后生成的页面地址 <code>年/月/日/标题</code> 就层级太多，太简陋，太难看了。不由得让我露出了嫌弃的表情。</p>
 <p>而且因为我们是中文写作的，所以 <code>title</code> 这里一般都会出现中文，然后就看到地址可能会是长长的转义字符，要不就是直接写中文，特别的……违和。</p>
 <p>所以这次优化一方面是为了更利于搜索引擎爬取，另一方面也是想让博客看起来不那么简陋，看起来像那么回事一点。</p>
 <h5 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h5><p>又是前人栽树后人乘凉，不用造轮子就是好，这位同道中人已经写好了工具：</p>
@@ -109,7 +109,7 @@
 <li><p>重新生成</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
 <p>可以看到文章头部的信息添加了一个 <code>abbrlink</code> 字段。比如我这篇：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">   title: 我的 Hexo 博客进阶（四）</div><div class="line">tags: 博客搭建</div><div class="line">categories: 博客搭建</div><div class="line">abbrlink: 25109</div><div class="line">date: 2019-09-23 13:31:01</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: 我的 Hexo 博客进阶（四）</div><div class="line">tags: 博客搭建</div><div class="line">categories: 博客搭建</div><div class="line">abbrlink: 25109</div><div class="line">date: 2019-09-23 13:31:01</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>   这个 <code>abbrlink</code> 值以后就是我们页面恒久不变的地址了，可以方便搜索引擎来爬取。</p>
