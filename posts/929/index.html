@@ -89,7 +89,7 @@
     <section class="markdown-content"><h3 id="程序员的-Tricks-03"><a href="#程序员的-Tricks-03" class="headerlink" title="程序员的 Tricks - 03"></a>程序员的 Tricks - 03</h3><p>这个系列好久没继续了，说明好久没遇到奇葩的需求，虽然没遇到奇葩需求很开心，但是系列文章没得可写了也是挺纠结的呢。</p>
 <p>今天来聊聊之前遇到的一个奇葩事。</p>
 <p>咨询人员给了我们一个 Excel 文档，里面只有一个根据数据生成的散点图，源数据的表格并不在这个文档里，而他的要求是……让我们用图里的数据拟合出曲线公式来，然后用拟合出来的公式计算数据。</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_0.png?raw=true" alt=""></p>
+<p><img src="http://image.tubbodetang.site/tricks_3_0.png" alt=""></p>
 <p>当时我和我的小伙伴内心又是万马奔腾，可以看到图中数据点很密，点都已经连成线了，根本不是靠带几个值就能反算或者是根据图表上的几个数据点就能编出计算结果来的……</p>
 <p>面面相觑之后还是得靠百度，看看有没有合适的解决方案，毕竟程序员也不是万能的。没有的话，就只能取几个临近点估值了，但那样就无法得到用于自动化计算的公式了。</p>
 <p>在搜索引擎里找答案，靠的真的是一种问问题的能力，换了几种问法之后，我终于搜到了解决这个问题的关键钥匙：Excel 里的宏。</p>
@@ -101,17 +101,17 @@
 <p>学会了 VBA，使用这些软件解决问题和办公的效率将大大提升，所以其实 VBA 完全可以作为一个单独的技能去学习。不过这不是我们今天的重点，我们的重点，只是了解一下这个功能，并看看它有多么强大，以便以后有需求的时候能速速想起并运用。</p>
 <p>我找到的是一段可以解决我问题的 VBA 代码，现在就来应用它试一试。</p>
 <p>首先打开 Excel（我的是 2013），然后在表名上右击打开代码编辑器。</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_1.png?raw=true" alt=""></p>
+<p><img src="http://image.tubbodetang.site/tricks_3_1.png" alt=""></p>
 <p>代码编辑器长这样：</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_2.png?raw=true" alt=""></p>
+<p><img src="http://image.tubbodetang.site/tricks_3_2.png" alt=""></p>
 <p>在 ChartData 表（表名也要和程序中的对应才能找到对象）填入如下代码。</p>
 <figure class="highlight vbscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Sub</span> GetChartValues()</div><div class="line">   <span class="keyword">Dim</span> nRows As Integer</div><div class="line">   <span class="keyword">Dim</span> X As Object</div><div class="line">   Counter = <span class="number">2</span></div><div class="line"></div><div class="line">   nRows = <span class="built_in">UBound</span>(ActiveChart.SeriesCollection(<span class="number">1</span>).Values)</div><div class="line">    <span class="comment">'数据的数量 nRows </span></div><div class="line">   Worksheets(<span class="string">"ChartData"</span>).Cells(<span class="number">1</span>, <span class="number">1</span>) = <span class="string">"X Values"</span>  </div><div class="line">    <span class="comment">'ChartData 表的（1，1）格写 “X Values”</span></div><div class="line"></div><div class="line">   <span class="keyword">With</span> Worksheets(<span class="string">"ChartData"</span>)</div><div class="line">      .Range(.Cells(<span class="number">2</span>, <span class="number">1</span>), .Cells(nRows + <span class="number">1</span>, <span class="number">1</span>)) = Application.Transpose(ActiveChart.SeriesCollection(<span class="number">1</span>).XValues)</div><div class="line">   <span class="keyword">End</span> <span class="keyword">With</span></div><div class="line">   <span class="comment">'_从第(2,1)格开始，到第(nRows + 1,1)格，填入选中图表的所有 X 值_</span></div><div class="line"></div><div class="line">   <span class="keyword">For</span> <span class="keyword">Each</span> X <span class="keyword">In</span> ActiveChart.SeriesCollection </div><div class="line">   <span class="comment">'如果图表有多个系列值，依次循环输出到 2、3、4 ... n 列</span></div><div class="line">      Worksheets(<span class="string">"ChartData"</span>).Cells(<span class="number">1</span>, Counter) = X.Name</div><div class="line">      <span class="comment">'在第一行写入系列名</span></div><div class="line">      <span class="keyword">With</span> Worksheets(<span class="string">"ChartData"</span>)</div><div class="line">         .Range(.Cells(<span class="number">2</span>, Counter), .Cells(nRows + <span class="number">1</span>, Counter)) = Application.Transpose(X.Values)</div><div class="line">      <span class="keyword">End</span> <span class="keyword">With</span></div><div class="line">      <span class="comment">' _从第(2,n)格开始，到第(nRows + 1,n)格，，填入选中图表第 n 系列的所有 X 值对应的 Y 值_</span></div><div class="line">        Counter = Counter + <span class="number">1</span>   <span class="comment">'_下一系列值_</span></div><div class="line">   <span class="keyword">Next</span></div><div class="line"></div><div class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></div></pre></td></tr></table></figure>
 <p>大概写了一下注释说明，我也不太会写 VBA，不过看个大概意思还是没问题的。</p>
 <p>好了，接下来保存代码，保存的时候会提示普通的 .xlsx 格式不支持宏运行，所以保存为 .xlsm 的格式，这样就可以支持宏运行了。</p>
 <p>最后选中我们的图表（一定要选中才有目标对象），运行宏。</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_3.png?raw=true" alt=""></p>
+<p><img src="http://image.tubbodetang.site/tricks_3_3.png" alt=""></p>
 <p>然后就看到，酷炫的结果出现了。那张散点图里的 2000 多条数据，全部被提取出来了，这样就可以根据数据去重新拟合一个曲线了。</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_4.png?raw=true" alt=""></p>
+<p><img src="http://image.tubbodetang.site/tricks_3_4.png" alt=""></p>
 <p>是不是还挺强大的，能做到一些基础功能做不到或者想都不敢想的事。</p>
 <p>更牛逼的是，一旦写好一段程序之后，其他的文件也都可以通用，这样的话，处理百八十个相同需求的文档，就都不在话下了。</p>
 <p>好了，今天的程序员偷懒技能就分享到这里。不知道下次还会遇到什么奇葩需求，也不知道下次还要过多久，遇到的时候，我们再见咯。</p>
@@ -240,7 +240,7 @@
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
     <br>

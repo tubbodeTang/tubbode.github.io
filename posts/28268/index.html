@@ -108,31 +108,31 @@
 </ul>
 <p>提交过程其实都差不多，都是：添加网址-验证权限-上传站点地图-等待，这么一个流程。</p>
 <h5 id="先说说百度："><a href="#先说说百度：" class="headerlink" title="先说说百度："></a>先说说百度：</h5><p>登录后在用户中心-站点管理中，添加站点，按照步骤操作</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_1.png?raw=true" alt="添加站点"></p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_2.png?raw=true" alt="百度验证"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_1.png" alt="添加站点"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_2.png" alt="百度验证"></p>
 <p>下载验证文件，然后放在博客的 <code>themes</code> 主题文件夹的 <code>source</code> 目录下，这样博客生成发布之后，这个文件才会在站点的根目录。</p>
 <p>然后还是这两步，生成发布博客：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
 <p>此时我们的 <code>public</code> 文件夹里就有了验证文件。</p>
 <p>按照步骤验证，最后验证成功。</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_3.png?raw=true" alt="验证成功"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_3.png" alt="验证成功"></p>
 <p>到这里我们已经把站点添加到了平台中。</p>
 <p>最后进入站点管理，点击我们刚刚添加的站点，在导航栏找到：数据引入-链接提交，就可以上传我们准备好的 sitemap 了。</p>
 <p>地址按照要求填写即可：<code>yoursite/baidusitemap.xml</code></p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_5.png?raw=true" alt="提交百度站点地图"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_5.png" alt="提交百度站点地图"></p>
 <p>这里可以看到提交站点其实有很多种方法，甚至可以手动一个一个粘贴提交，自动提交也可以用代码主动推送，我这里只选择了最方便的 sitemap 解决方案，如果想要更快速的提交自己的站点，也可以查一查主动推送的实现方法。</p>
 <p>提交之后，可以看到自己的站点正在等待被抓取，这个等待时间不一定，新站可能会更慢，百度的脾气，大家是知道的，如果等不及，建议还是上主动推送。</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_6.png?raw=true" alt="提交结果"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_6.png" alt="提交结果"></p>
 <h5 id="再说说谷歌："><a href="#再说说谷歌：" class="headerlink" title="再说说谷歌："></a>再说说谷歌：</h5><p>谷歌和百度除了站长平台的界面长得不一样以外，其他流程都是一样的。就不啰嗦了，还是添加一个站点，然后按步骤验证：</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_4.png?raw=true" alt="谷歌验证"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_4.png" alt="谷歌验证"></p>
 <p>下载文件之后放在博客的 <code>themes</code> 主题文件夹的 <code>source</code> 目录下，生成发布博客：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
 <p>就可验证成功了。</p>
 <p>然后在站点地图的地方添加站点地图 <code>sitemap.xml</code> 即可</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_7.png?raw=true" alt="谷歌站点添加"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_7.png" alt="谷歌站点添加"></p>
 <p>提交之后一样看到爬取结果。谷歌的比百度快一些，基本一天之后就有状态了。</p>
 <h5 id="最后是-Bing-必应："><a href="#最后是-Bing-必应：" class="headerlink" title="最后是 Bing 必应："></a>最后是 Bing 必应：</h5><p>除了上面的方法，必应比较贴心的准备了和 Google 站长的关联选项，所以我这里就不再重复操作了，直接关联上 Google 站长的信息就可以了。</p>
-<p><img src="https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_8.png?raw=true" alt="Bing"></p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_8.png" alt="Bing"></p>
 <p>不过必应的收录要求也挺高的，据说他喜欢收录图片站和文章比较长的，收录前还会观察你的站点是否是频繁更新的。收录的时间周期也比较长。</p>
 <p>所以除了提交我们的站点到各大搜索引擎以外，最重要的还是好好写文，努力积累！</p>
 <p>————————————</p>
@@ -265,7 +265,7 @@
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
     <br>
