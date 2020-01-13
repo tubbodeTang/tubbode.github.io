@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="前端 UI">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" type="image/ico" href="/css/images/myLogo.png"/> 
+  <!-- 
+    <link rel="shortcut icon" type="image/ico" href="css/images/myLogo.png"/> 
+   -->
+  <title>
+    
+      阿里云轻量应用服务器入坑 | tubbodeTang
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <!-- <img src="/css/images/myLogo.jpg" /> -->
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <!-- <div class="logo"></div> -->
+      <i class="iconfont">&#xe602;</i>
+      <span>Keep Fighting</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>阿里云轻量应用服务器入坑</h2>
+  <!-- <p class="post-date">10/29/2019</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><h4 id="终于还是来到了阿里云"><a href="#终于还是来到了阿里云" class="headerlink" title="终于还是来到了阿里云"></a>终于还是来到了阿里云</h4><p>用 GitHub 做了一段时间的图床，我担心的事情还是发生了，图片链接开始变得不稳定，经常 timeout 404 了。</p>
+<p>所以，还是绕不开的来到了购买阿里云服务器，域名备案，图床建立、甚至整个博客都搬上去的过程。不过后面的都是后话，今天先来聊聊阿里云服务器的入坑吧。</p>
+<p>之前在云服务器这块也算是个小白了，不知道究竟五花八门的服务到底哪个比较适合，毕竟我最开始只是想有个稳定图床，哪想到后面还有这么大一个坑。</p>
+<p>所以在阿里云上转了很久我也依旧没有走到最后一步付款，一个是真的看得很晕，另一个就是价格有点贵，真的有点受不了。</p>
+<p>还好等了一个月，学生信息终于注册上了，通过了阿里云的学生认证，可以有优惠了，所以果断入坑，研究研究这一块，体验一下。</p>
+<p>想买阿里云服务器的学生，可以看看下面的活动页和简介了解一下基本信息。</p>
+<p><a href="https://promotion.aliyun.com/ntms/act/campus2018.html" target="_blank" rel="external">云翼计划</a></p>
+<p><a href="https://yq.aliyun.com/articles/720693?spm=a2c4e.11155472.0.0.1afd3a20IZSflN" target="_blank" rel="external">阿里云服务器学生机具体介绍与购买指南</a></p>
+<h4 id="ECS-和-轻量的比较"><a href="#ECS-和-轻量的比较" class="headerlink" title="ECS 和 轻量的比较"></a>ECS 和 轻量的比较</h4><p>比较可以看看这几篇文章：</p>
+<p><a href="https://yq.aliyun.com/articles/575020" target="_blank" rel="external">阿里云轻量应用服务器和ecs云服务器哪个好？</a></p>
+<p><a href="https://yq.aliyun.com/articles/700446" target="_blank" rel="external">阿里云虚拟主机、轻量应用服务器和ECS云服务器的区别</a></p>
+<p><a href="https://blog.csdn.net/qq_41204464/article/details/90635404" target="_blank" rel="external">阿里云ECS 云服务器和轻量应用服务器 区别</a></p>
+<p><a href="https://blog.csdn.net/lihuixin_/article/details/78021168" target="_blank" rel="external">ECS 还是轻量应用服务器，看完评测你就知道了？</a></p>
+<p>我最后选了轻量，因为还在入门阶段，慢慢来吧，先把轻量吃透再说。</p>
+<p>购买图：</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_3_1.png" alt=""></p>
+<h4 id="备案之前的域名"><a href="#备案之前的域名" class="headerlink" title="备案之前的域名"></a>备案之前的域名</h4><p>之前已经在折腾博客的时候购买过域名了，所以接下来就是备案啦。</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_3_2.png" alt=""></p>
+<p>备案流程如下图</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_3_3.png" alt=""></p>
+<p>按照流程操作就可以了。期间还会提示用阿里云 App 操作审核会快一些，方便一些，也可以不用，我是用 App 操作的，感觉还挺方便的。</p>
+<p>信息都提交了之后，就是等着了，期间会电话联系你确认一些信息，过几天就备案成功了，我大概等了两周就收到了备案成功的短信。</p>
+<p><img src="http://image.tubbodetang.site/beian_success.jpg" style="zoom:50%;"></p>
+<p>备案成功之后还得按照要求把自己的站点关联到域名并有访问记录，否则会说是空壳网站，会被警告并取消备案。这个还是得注意下，别花了很多时间精力以为万事大吉就不管了。</p>
+<h4 id="想想未来"><a href="#想想未来" class="headerlink" title="想想未来"></a>想想未来</h4><p>有了轻量服务器可以做什么：</p>
+<ul>
+<li>首先就是我最开始想做的——图床</li>
+<li>博客移植</li>
+<li>代码服务器</li>
+<li>发布自己的小项目</li>
+<li>也可以自己搭一个云盘……</li>
+</ul>
+<p>总之能做的应该很多，但应该都是记录个人成长相关的，今天起步后，待我慢慢折腾吧。</p>
+<p>————————————</p>
+<p>本文完。</p>
+<p>最后更新于 2019-11-16</p>
+</section>
+    <!-- 
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#云服务器" >
+    <span class="tag-code">云服务器</span>
+  </a>
+
+      </div>
+     -->
+    <!-- <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div> -->
+    <div class="time-tag">
+      <span>tubbodeTang</span>
+      <span>2019-10-29</span>
+    </div>
+
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    
+      <div id="comments"></div>
+    
+  </article>
+</main>
+
+<script>
+  (function () {
+    var url = 'http://www.tubbodetang.site/posts/22932/';
+    var banner = ''
+    if (banner) {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      var imageW = $(this).width()
+      var imageH = $(this).height()
+      
+      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+      zoom = zoom < 1 ? 1 : zoom
+      zoom = zoom > 2 ? 2 : zoom
+      var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+      $('.image-view-wrap').addClass('wrap-active')
+      $('.image-view-wrap img').css({
+        'width': `${imageW}`,
+        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+      })
+      $('html').css('overflow', 'hidden')
+
+      $('.image-view-wrap').on('click', function() {
+        $(this).remove()
+        $('html').attr('style', '')
+      })
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "tubbodeTang";
+    if (gitmentConfig != "undefined") {
+      var gitment = new Gitment({
+        id: "阿里云轻量应用服务器入坑",
+        owner: "tubbodeTang",
+        repo: "tubbodeTang.github.io",
+        oauth: {
+          client_id: "2eb057f87192cbf561c3",
+          client_secret: "db8188fb69bd9075c92b9a0fc2efc659b4194d9c"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
+    <br>
+    based on <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
