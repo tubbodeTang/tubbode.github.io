@@ -14,16 +14,43 @@
       tubbodeTang
     
   </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
 </head>
 <div class="wechat-share">
   <!-- <img src="/css/images/myLogo.jpg" /> -->
@@ -106,84 +133,31 @@
   <p class="post-date">标签检索</p>
 </div>
 <main class="app-body">
-  <div id="tag-cloud">
-    
-      <a class="tag3" data-name="tag-Tools">Tools</a>
+  <div id="tag-cloud" class="tagpage">
     
       <a class="tag1" data-name="tag-个人经历">个人经历</a>
     
-      <a class="tag2" data-name="tag-Echarts">Echarts</a>
+      <a class="tag1" data-name="tag-Flutter">Flutter</a>
     
-      <a class="tag3" data-name="tag-博客搭建">博客搭建</a>
+      <a class="tag2" data-name="tag-博客搭建">博客搭建</a>
     
-      <a class="tag0" data-name="tag-Flutter">Flutter</a>
+      <a class="tag1" data-name="tag-Echarts">Echarts</a>
     
-      <a class="tag3" data-name="tag-Javascript">Javascript</a>
+      <a class="tag1" data-name="tag-Tools">Tools</a>
     
-      <a class="tag2" data-name="tag-生活 经历">生活 经历</a>
+      <a class="tag1" data-name="tag-生活 经历">生活 经历</a>
+    
+      <a class="tag1" data-name="tag-Javascript">Javascript</a>
     
       <a class="tag2" data-name="tag-读书笔记">读书笔记</a>
     
-      <a class="tag1" data-name="tag-云服务器">云服务器</a>
+      <a class="tag2" data-name="tag-云服务器">云服务器</a>
     
   </div>
   
     <div class="tag-list">
-      <h3 class="tag-name" id="tag-Tools">Tools</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/21821/">关于双拼那些事</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/65333/">工具推荐——Cmder</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/30816/">常用图表总结——柱图</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/34350/">常用图表总结——线图</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/49696/">程序员的 Tricks - 01</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/929/">程序员的 Tricks - 03</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/50016/">程序员的 Tricks - 02</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
       <h3 class="tag-name" id="tag-个人经历">个人经历</h3>
       
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/5018/">2018 年中总结</a>
-          </li>
-        </ul>
-        
         <ul class="tag-preview">
           <li>
             <a href="/posts/23468/">2019 年度总结</a>
@@ -192,25 +166,13 @@
         
         <ul class="tag-preview">
           <li>
+            <a href="/posts/5018/">2018 年中总结</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
             <a href="/posts/42741/">一些开心事</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/62534/">写博客的一点感悟</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/53827/">别在信息洪流里迷失了方向</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/posts/18239/">又见套路…</a>
           </li>
         </ul>
         
@@ -228,6 +190,12 @@
         
         <ul class="tag-preview">
           <li>
+            <a href="/posts/18239/">又见套路…</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
             <a href="/posts/32137/">怎么立 Flag 才不会倒？</a>
           </li>
         </ul>
@@ -235,6 +203,18 @@
         <ul class="tag-preview">
           <li>
             <a href="/posts/59642/">时刻记着把自己放在低位</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/53827/">别在信息洪流里迷失了方向</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/62534/">写博客的一点感悟</a>
           </li>
         </ul>
         
@@ -259,11 +239,11 @@
     </div>
     
     <div class="tag-list">
-      <h3 class="tag-name" id="tag-Echarts">Echarts</h3>
+      <h3 class="tag-name" id="tag-Flutter">Flutter</h3>
       
         <ul class="tag-preview">
           <li>
-            <a href="/posts/38946/">Echarts 之复合饼图的解决方案</a>
+            <a href="/posts/40166/">Flutter 踩坑记录</a>
           </li>
         </ul>
         
@@ -280,19 +260,13 @@
         
         <ul class="tag-preview">
           <li>
-            <a href="/posts/31145/">Hexo 博客阿里云同步部署更新</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
             <a href="/posts/34286/">博客图床的迁移</a>
           </li>
         </ul>
         
         <ul class="tag-preview">
           <li>
-            <a href="/posts/28268/">我的 Hexo 博客进阶（三）</a>
+            <a href="/posts/31145/">Hexo 博客阿里云同步部署更新</a>
           </li>
         </ul>
         
@@ -304,7 +278,7 @@
         
         <ul class="tag-preview">
           <li>
-            <a href="/posts/25109/">我的 Hexo 博客进阶（四）</a>
+            <a href="/posts/28268/">我的 Hexo 博客进阶（三）</a>
           </li>
         </ul>
         
@@ -314,31 +288,67 @@
           </li>
         </ul>
         
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-Flutter">Flutter</h3>
-      
         <ul class="tag-preview">
           <li>
-            <a href="/posts/40166/">Flutter 踩坑记录</a>
+            <a href="/posts/25109/">我的 Hexo 博客进阶（四）</a>
           </li>
         </ul>
         
     </div>
     
     <div class="tag-list">
-      <h3 class="tag-name" id="tag-Javascript">Javascript</h3>
+      <h3 class="tag-name" id="tag-Echarts">Echarts</h3>
       
         <ul class="tag-preview">
           <li>
-            <a href="/posts/12448/">Javascript 之数组操作（下）</a>
+            <a href="/posts/38946/">Echarts 之复合饼图的解决方案</a>
+          </li>
+        </ul>
+        
+    </div>
+    
+    <div class="tag-list">
+      <h3 class="tag-name" id="tag-Tools">Tools</h3>
+      
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/21821/">关于双拼那些事</a>
           </li>
         </ul>
         
         <ul class="tag-preview">
           <li>
-            <a href="/posts/52385/">Javascript 之数组操作（上）</a>
+            <a href="/posts/30816/">常用图表总结——柱图</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/34350/">常用图表总结——线图</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/65333/">工具推荐——Cmder</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/50016/">程序员的 Tricks - 02</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/49696/">程序员的 Tricks - 01</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/929/">程序员的 Tricks - 03</a>
           </li>
         </ul>
         
@@ -362,14 +372,25 @@
     </div>
     
     <div class="tag-list">
-      <h3 class="tag-name" id="tag-读书笔记">读书笔记</h3>
+      <h3 class="tag-name" id="tag-Javascript">Javascript</h3>
       
         <ul class="tag-preview">
           <li>
-            <a href="/posts/20221/">读书 -「活出生命的意义」</a>
+            <a href="/posts/12448/">Javascript 之数组操作（下）</a>
           </li>
         </ul>
         
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/52385/">Javascript 之数组操作（上）</a>
+          </li>
+        </ul>
+        
+    </div>
+    
+    <div class="tag-list">
+      <h3 class="tag-name" id="tag-读书笔记">读书笔记</h3>
+      
         <ul class="tag-preview">
           <li>
             <a href="/posts/31895/">读书 - 「乔布斯传」</a>
@@ -378,13 +399,19 @@
         
         <ul class="tag-preview">
           <li>
-            <a href="/posts/6014/">读书 - 「曾国藩传」</a>
+            <a href="/posts/59341/">读书 -「前方的路」</a>
           </li>
         </ul>
         
         <ul class="tag-preview">
           <li>
-            <a href="/posts/59341/">读书 -「前方的路」</a>
+            <a href="/posts/20221/">读书 -「活出生命的意义」</a>
+          </li>
+        </ul>
+        
+        <ul class="tag-preview">
+          <li>
+            <a href="/posts/6014/">读书 - 「曾国藩传」</a>
           </li>
         </ul>
         
@@ -410,6 +437,7 @@
     $('.header').removeClass('fixed-header')
 
     var tag = location.hash.replace('#', '')
+    debugger
     if (tag) {
       var tagId = "#tag-" + tag;
       $("html, body").animate({
@@ -445,17 +473,17 @@
   }
 </script>
 <script>
-  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
     FastClick.attach(document.body);
   })
 </script>
 
 <script>
   var hasLine = 'true';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
     $('figure pre').each(function(i, block) {
       var figure = $(this).parents('figure');
-      if (hasLine == 'false') {
+      if (hasLine === 'false') {
         figure.find('.gutter').hide();
       }
       var lang = figure.attr('class').split(' ')[1] || 'code';

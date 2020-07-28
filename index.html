@@ -14,16 +14,43 @@
       tubbodeTang
     
   </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
 </head>
 <div class="wechat-share">
   <!-- <img src="/css/images/myLogo.jpg" /> -->
@@ -102,1038 +129,1110 @@
 </header>
 
     <main class="app-body">
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/23468/">2019 年度总结</a>
-    </h2>
-    <p class="article-date">2020-01-14</p>
-    <!-- 
-      
+  <div class="lcontent article-list">
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/23468/">2019 年度总结</a>
+      </h2>
+      <p class="article-date">2020-01-14</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        今天的主题是聊聊我的 2019。
+         -->
+      <!-- <div class="article-summary">
+          
+            今天的主题是聊聊我的 2019。
 我习惯性在春节前后写写总结与展望，因为过年回家的假期是一个调整的阶段，在这之前，一整年的工作从没有中断过，而过年回来，也才是新的一年正式工作的开始。这样虽然赶不上网络上年终总结的热度，但是却更能让自己冷静思考，过年假期的时候好好调整一下。
 2019 最深刻的 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/23468/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/31145/">Hexo 博客阿里云同步部署更新</a>
-    </h2>
-    <p class="article-date">2020-01-10</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/23468/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/31145/">Hexo 博客阿里云同步部署更新</a>
+      </h2>
+      <p class="article-date">2020-01-10</p>
+      <!-- 
+          
   <a href="/tags#博客搭建" >
     <span class="tag-code">博客搭建</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        之前的博客一直是同时挂在 GitHub Pages 服务和 Coding 的 Pages 服务上的。但是网站备案通过后我一直没时间管，有一天忽然通知我需要指向阿里云国内节点服务器才行，否则就按空壳网站取消备案，所以没办法，决定先把博客放上阿里云再说吧……
+         -->
+      <!-- <div class="article-summary">
+          
+            之前的博客一直是同时挂在 GitHub Pages 服务和 Coding 的 Pages 服务上的。但是网站备案通过后我一直没时间管，有一天忽然通知我需要指向阿里云国内节点服务器才行，否则就按空壳网站取消备案，所以没办法，决定先把博客放上阿里云再说吧……
 由于购买的是 Ubuntu 操作系统 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/31145/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/34286/">博客图床的迁移</a>
-    </h2>
-    <p class="article-date">2020-01-09</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/31145/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/34286/">博客图床的迁移</a>
+      </h2>
+      <p class="article-date">2020-01-09</p>
+      <!-- 
+          
   <a href="/tags#博客搭建" >
     <span class="tag-code">博客搭建</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        之前一直在用 GitHub 的免费图床，但由于一些不稳定因素，图片经常打不开。虽然知道付费的图床更稳定，但是由于一些个人的原因，尽管我开通了空间，也一直没有正式投入使用。
+         -->
+      <!-- <div class="article-summary">
+          
+            之前一直在用 GitHub 的免费图床，但由于一些不稳定因素，图片经常打不开。虽然知道付费的图床更稳定，但是由于一些个人的原因，尽管我开通了空间，也一直没有正式投入使用。
 但现在我已经准备好了，所以接下来就可以搭建新的稳定图床并迁移了。
 七牛云图床的搭建开通这个部分网上很多教程的，我就不赘述 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/34286/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/62534/">写博客的一点感悟</a>
-    </h2>
-    <p class="article-date">2019-11-08</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/34286/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/62534/">写博客的一点感悟</a>
+      </h2>
+      <p class="article-date">2019-11-08</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        不知不觉的，开始写博客已经有一段时间了，一开始虽然说自己要开始写了，但是写的的确不多，一个月或者两个月能想到东西攒一下都不容易了，也是到了今年，手头其他的事情告一段落，才开始疯狂沉淀输出。
+         -->
+      <!-- <div class="article-summary">
+          
+            不知不觉的，开始写博客已经有一段时间了，一开始虽然说自己要开始写了，但是写的的确不多，一个月或者两个月能想到东西攒一下都不容易了，也是到了今年，手头其他的事情告一段落，才开始疯狂沉淀输出。
 开始疯狂输出之后，到今天，我才开始发觉写博客真的是一件有趣且容易上瘾的事。
 为什么说它有趣呢。
 因为以 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/62534/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/22932/">阿里云轻量应用服务器入坑</a>
-    </h2>
-    <p class="article-date">2019-10-29</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/62534/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/22932/">阿里云轻量应用服务器入坑</a>
+      </h2>
+      <p class="article-date">2019-10-29</p>
+      <!-- 
+          
   <a href="/tags#云服务器" >
     <span class="tag-code">云服务器</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        终于还是来到了阿里云用 GitHub 做了一段时间的图床，我担心的事情还是发生了，图片链接开始变得不稳定，经常 timeout 404 了。
+         -->
+      <!-- <div class="article-summary">
+          
+            终于还是来到了阿里云用 GitHub 做了一段时间的图床，我担心的事情还是发生了，图片链接开始变得不稳定，经常 timeout 404 了。
 所以，还是绕不开的来到了购买阿里云服务器，域名备案，图床建立、甚至整个博客都搬上去的过程。不过后面的都是后话，今天先来聊聊阿里云服务器的入坑吧。
 之前 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/22932/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/25109/">我的 Hexo 博客进阶（四）</a>
-    </h2>
-    <p class="article-date">2019-09-23</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/22932/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/25109/">我的 Hexo 博客进阶（四）</a>
+      </h2>
+      <p class="article-date">2019-09-23</p>
+      <!-- 
+          
   <a href="/tags#博客搭建" >
     <span class="tag-code">博客搭建</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        有了博客，我们就要把他当作一个小产品去认真对待，正常站点需要做的维护，了解了之后，都可以在博客上试试水，看看它的表现如何。
+         -->
+      <!-- <div class="article-summary">
+          
+            有了博客，我们就要把他当作一个小产品去认真对待，正常站点需要做的维护，了解了之后，都可以在博客上试试水，看看它的表现如何。
 这一篇主要还是针对搜索方面的小优化，其实针对搜索引擎进行站点的优化也是一门高深的学问，它就是 SEO，作为个人博我在这方面没有特别深究，经常是搜索其它问题的时候看到别人 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/25109/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/34350/">常用图表总结——线图</a>
-    </h2>
-    <p class="article-date">2019-09-15</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/25109/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/34350/">常用图表总结——线图</a>
+      </h2>
+      <p class="article-date">2019-09-15</p>
+      <!-- 
+          
   <a href="/tags#Tools" >
     <span class="tag-code">Tools</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        上次我们总结了柱图，这次来说说线图吧。
+         -->
+      <!-- <div class="article-summary">
+          
+            上次我们总结了柱图，这次来说说线图吧。
 线图主要是用于展示连续变化的数据的变化趋势，既然是趋势，一般都会和时间扯上点关系，所以线图的横轴不会按类目来独立展示，一般只有一个变量就是时间。
 在折线图中，数据是递增还是递减、增减的速率、增减的规律（周期性、螺旋性等）、峰值等特征都可以清晰地反映出来 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/34350/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/38700/">病中杂谈</a>
-    </h2>
-    <p class="article-date">2019-09-09</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/34350/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/38700/">病中杂谈</a>
+      </h2>
+      <p class="article-date">2019-09-09</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        病中杂谈最近，我的身体出了一点问题，医生说是突发性耳聋，而更令人困扰的问题是，这个病原因不明。又或者是对于不同的人，激发的条件不同，可能性太多，所以最终就变成了原因不明。
+         -->
+      <!-- <div class="article-summary">
+          
+            病中杂谈最近，我的身体出了一点问题，医生说是突发性耳聋，而更令人困扰的问题是，这个病原因不明。又或者是对于不同的人，激发的条件不同，可能性太多，所以最终就变成了原因不明。
 我自己上网查了一些资料，大多数人都是由于精神压力，或者是休息不好而引起的。也有其他的一些原因，但可能因为相关性不明，所以 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/38700/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/28268/">我的 Hexo 博客进阶（三）</a>
-    </h2>
-    <p class="article-date">2019-08-09</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/38700/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/28268/">我的 Hexo 博客进阶（三）</a>
+      </h2>
+      <p class="article-date">2019-08-09</p>
+      <!-- 
+          
   <a href="/tags#博客搭建" >
     <span class="tag-code">博客搭建</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        上回提到GitHub 有防百度爬虫的措施，所以我们在 Coding Pages 服务上也部署了一遍博客，这还只是折腾之路的第一步。
+         -->
+      <!-- <div class="article-summary">
+          
+            上回提到GitHub 有防百度爬虫的措施，所以我们在 Coding Pages 服务上也部署了一遍博客，这还只是折腾之路的第一步。
 其实由于 Github 和 Coding 都做了防爬虫处理，搜索引擎是无法直接发现我们博客的，这样别人在搜索问题的时候，搜出来的答案也不会包含我们博客中的内容， ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/28268/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/25110/">我的 Hexo 博客进阶（二）</a>
-    </h2>
-    <p class="article-date">2019-07-31</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/28268/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/25110/">我的 Hexo 博客进阶（二）</a>
+      </h2>
+      <p class="article-date">2019-07-31</p>
+      <!-- 
+          
   <a href="/tags#博客搭建" >
     <span class="tag-code">博客搭建</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        有了博客之后，当然是需要被更多人看到了，我们总不希望自己写博客是写给自己看，自说自话的吧，那就不叫博客，叫日记了。所以博客进阶，我们来讲讲如何让更多人看到我们的静态博客。
+         -->
+      <!-- <div class="article-summary">
+          
+            有了博客之后，当然是需要被更多人看到了，我们总不希望自己写博客是写给自己看，自说自话的吧，那就不叫博客，叫日记了。所以博客进阶，我们来讲讲如何让更多人看到我们的静态博客。
 由于 GitHub 有防百度爬虫的措施，建议把我们的博客在 Coding 上也做一遍，这样国内用的比较多的百度搜索可以通 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/25110/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/62063/">我的 Hexo 博客进阶（一）</a>
-    </h2>
-    <p class="article-date">2019-07-12</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/25110/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/62063/">我的 Hexo 博客进阶（一）</a>
+      </h2>
+      <p class="article-date">2019-07-12</p>
+      <!-- 
+          
   <a href="/tags#博客搭建" >
     <span class="tag-code">博客搭建</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        Hexo 博客搭建 这篇文章已经讲了如何借助 Hexo 搭建一个静态博客，目前我们的博客已经有了属于我们的内容和样式风格，也可以借助 GitHub 的 Pages 功能在互联网上访问到了，那么如何才能让我们的博客写起来效率更高，更高大上呢？
+         -->
+      <!-- <div class="article-summary">
+          
+            Hexo 博客搭建 这篇文章已经讲了如何借助 Hexo 搭建一个静态博客，目前我们的博客已经有了属于我们的内容和样式风格，也可以借助 GitHub 的 Pages 功能在互联网上访问到了，那么如何才能让我们的博客写起来效率更高，更高大上呢？
 图床用 Markdown 写博客，有一个最不好处理 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/62063/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/40166/">Flutter 踩坑记录</a>
-    </h2>
-    <p class="article-date">2019-07-02</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/62063/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/40166/">Flutter 踩坑记录</a>
+      </h2>
+      <p class="article-date">2019-07-02</p>
+      <!-- 
+          
   <a href="/tags#Flutter" >
     <span class="tag-code">Flutter</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        决定踩一下 Flutter 的坑了，做个记录。
+         -->
+      <!-- <div class="article-summary">
+          
+            决定踩一下 Flutter 的坑了，做个记录。
 教程的话，起步我觉得看这个就够：Flutter 中文网
 Flutter 踩坑记录整个过程可能会用到梯子。
 下载可以去官网下载 zip 包（要梯子）或者 直接去 Flutter 的 GitHub 项目中 download or clone 你需要 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/40166/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/929/">程序员的 Tricks - 03</a>
-    </h2>
-    <p class="article-date">2019-07-01</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/40166/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/929/">程序员的 Tricks - 03</a>
+      </h2>
+      <p class="article-date">2019-07-01</p>
+      <!-- 
+          
   <a href="/tags#Tools" >
     <span class="tag-code">Tools</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        程序员的 Tricks - 03这个系列好久没继续了，说明好久没遇到奇葩的需求，虽然没遇到奇葩需求很开心，但是系列文章没得可写了也是挺纠结的呢。
+         -->
+      <!-- <div class="article-summary">
+          
+            程序员的 Tricks - 03这个系列好久没继续了，说明好久没遇到奇葩的需求，虽然没遇到奇葩需求很开心，但是系列文章没得可写了也是挺纠结的呢。
 今天来聊聊之前遇到的一个奇葩事。
 咨询人员给了我们一个 Excel 文档，里面只有一个根据数据生成的散点图，源数据的表格并不在这个文档里，而他的要 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/929/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/42741/">一些开心事</a>
-    </h2>
-    <p class="article-date">2019-06-26</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/929/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/42741/">一些开心事</a>
+      </h2>
+      <p class="article-date">2019-06-26</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        一些开心事最近有几个值得开心的事情，值得记录。
+         -->
+      <!-- <div class="article-summary">
+          
+            一些开心事最近有几个值得开心的事情，值得记录。
 第一是我这几年里最重要的一件事，也是压制我最多的一件事，终于完成了还是有点小成就感的，那就是，我终于收到了研究生的录取通知书了。
 
 拿到通知书的那天正好是父亲节，我妈也刚好来北京。现在工作学习都比较忙，离家远，一年才能回去一次。虽说也期待父母有 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/42741/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/52716/">又一次告别</a>
-    </h2>
-    <p class="article-date">2019-06-25</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/42741/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/52716/">又一次告别</a>
+      </h2>
+      <p class="article-date">2019-06-25</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        又一次告别今天早上五点半起的，从学完车就没那么早起过了。其实起来之后比平时起得晚要精神很多，毕竟夏天，天亮的早，也比较热，基本睡不太好，晚起也经常只是在床上赖着而已。
+         -->
+      <!-- <div class="article-summary">
+          
+            又一次告别今天早上五点半起的，从学完车就没那么早起过了。其实起来之后比平时起得晚要精神很多，毕竟夏天，天亮的早，也比较热，基本睡不太好，晚起也经常只是在床上赖着而已。
 起这么早是因为要送老妈离开了，老妈这次来呆了三周，她说想在去南方办事之前来看看我，于是我邀请她来陪我一起过端午节。
 现在在北 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/52716/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/24877/">走在持续行动的路上</a>
-    </h2>
-    <p class="article-date">2019-06-02</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/52716/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/24877/">走在持续行动的路上</a>
+      </h2>
+      <p class="article-date">2019-06-02</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        走在持续行动的路上如果考研终于在多年之后成功是一个阶段的结束，那最近的我，就是拼了命在追回这几年里为了准备考试而牺牲的做其他事的时间，这也是一个全新的开始。
+         -->
+      <!-- <div class="article-summary">
+          
+            走在持续行动的路上如果考研终于在多年之后成功是一个阶段的结束，那最近的我，就是拼了命在追回这几年里为了准备考试而牺牲的做其他事的时间，这也是一个全新的开始。
 几个月前，我看了「曾国藩传」并开始了我的日课计划。一直到现在日课也写了快有三个月了。我把它发在了我的个人博客上面，为了不影响博客的主要 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/24877/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/18239/">又见套路…</a>
-    </h2>
-    <p class="article-date">2019-05-20</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/24877/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/18239/">又见套路…</a>
+      </h2>
+      <p class="article-date">2019-05-20</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        又见套路…周末去剪头发了，理发店本就是一个有意思的地方，和剪头发的、洗头的聊天都能获知很多奇妙的事情。而这次我遇到的一个小细节更让我惊奇……
+         -->
+      <!-- <div class="article-summary">
+          
+            又见套路…周末去剪头发了，理发店本就是一个有意思的地方，和剪头发的、洗头的聊天都能获知很多奇妙的事情。而这次我遇到的一个小细节更让我惊奇……
 因为平时去的店在装修，所以换了另一家，虽然两家是同品牌的连锁店，但一进门我就发现这店和平时去的那家有点不一样，套路有点多。
 引导员领我们进店之后报剪头 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/18239/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/20221/">读书 -「活出生命的意义」</a>
-    </h2>
-    <p class="article-date">2019-04-23</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/18239/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/20221/">读书 -「活出生命的意义」</a>
+      </h2>
+      <p class="article-date">2019-04-23</p>
+      <!-- 
+          
   <a href="/tags#读书笔记" >
     <span class="tag-code">读书笔记</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        读书 -「活出生命的意义」今天补写前一段时间读的「活出生命的意义」的读书小笺。
+         -->
+      <!-- <div class="article-summary">
+          
+            读书 -「活出生命的意义」今天补写前一段时间读的「活出生命的意义」的读书小笺。
 这本书的作者是奥斯维辛集中营的幸存者，心理学家维克多 · 弗兰克尔，他一生最大的成就，就是开创了意义疗法。
 书的前半部分结合作者在集中营的经历聊了聊意义疗法的背景，但没有描写很多痛苦的回忆，更多的是记录下在那种环 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/20221/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/31895/">读书 - 「乔布斯传」</a>
-    </h2>
-    <p class="article-date">2019-04-22</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/20221/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/31895/">读书 - 「乔布斯传」</a>
+      </h2>
+      <p class="article-date">2019-04-22</p>
+      <!-- 
+          
   <a href="/tags#读书笔记" >
     <span class="tag-code">读书笔记</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        读书 - 「乔布斯传」首先感慨一下自己前几年书读的太少，比如这一本好几年前的畅销书，我居然现在才来看，显得有点晚。
+         -->
+      <!-- <div class="article-summary">
+          
+            读书 - 「乔布斯传」首先感慨一下自己前几年书读的太少，比如这一本好几年前的畅销书，我居然现在才来看，显得有点晚。
 不过只要看了就不晚，至少没有一直纵容着自己的无知。从看完的那一刻开始，我对乔布斯和苹果，都有了一些新的认识。
 我觉得我真正第一次记住乔布斯这个名字是在 iPhone 4 大火的 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/31895/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/59642/">时刻记着把自己放在低位</a>
-    </h2>
-    <p class="article-date">2019-04-19</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/31895/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/59642/">时刻记着把自己放在低位</a>
+      </h2>
+      <p class="article-date">2019-04-19</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        时刻记着把自己放在低位今天早上起的早，看了一会曹大的文章，又鞭策了自己一下。
+         -->
+      <!-- <div class="article-summary">
+          
+            时刻记着把自己放在低位今天早上起的早，看了一会曹大的文章，又鞭策了自己一下。
 不夸张的说，曹大的话拳拳到肉，学到很多东西的同时，看得我脸上火辣辣的。
 感觉应该收藏下来，定期就拿出来翻翻。因为人总是健忘的，看文的时候认识到自己的不足，没过多久就忘了，开始变得飘飘然起来。
 曹大说关于心态不够谦虚 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/59642/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/56092/">记录一下我的考研路</a>
-    </h2>
-    <p class="article-date">2019-04-15</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/59642/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/56092/">记录一下我的考研路</a>
+      </h2>
+      <p class="article-date">2019-04-15</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        记录一下我的考研路首先特别惭愧地说，这篇不是来讲什么高分上岸之类的经验分享的，因为研究生，我考了四次，最后在今年这次还经历了据说是史上最难调剂的调剂过程，才算是勉强考上了，而且最后只是一个非全日制的研究生。
+         -->
+      <!-- <div class="article-summary">
+          
+            记录一下我的考研路首先特别惭愧地说，这篇不是来讲什么高分上岸之类的经验分享的，因为研究生，我考了四次，最后在今年这次还经历了据说是史上最难调剂的调剂过程，才算是勉强考上了，而且最后只是一个非全日制的研究生。
 相比很多学霸们高分一次性上岸名校的经历，我的经验可能更多的在选择和内心的挣扎上了，希 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/56092/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/6014/">读书 - 「曾国藩传」</a>
-    </h2>
-    <p class="article-date">2019-03-12</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/56092/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/6014/">读书 - 「曾国藩传」</a>
+      </h2>
+      <p class="article-date">2019-03-12</p>
+      <!-- 
+          
   <a href="/tags#读书笔记" >
     <span class="tag-code">读书笔记</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        读书 - 「曾国藩传」以前家中就有「曾国藩家书」一套，并且也对曾国藩其名略有耳闻，但我固执的坚持自己对晚清官场的偏见，一竿子打死，认为没有什么好看的，所以迟迟没有了解过那一段历史。
+         -->
+      <!-- <div class="article-summary">
+          
+            读书 - 「曾国藩传」以前家中就有「曾国藩家书」一套，并且也对曾国藩其名略有耳闻，但我固执的坚持自己对晚清官场的偏见，一竿子打死，认为没有什么好看的，所以迟迟没有了解过那一段历史。
 果然不出意外，书一翻开，就啪啪打脸了我之前对他的偏见。
 一开始，我以为能在那种乱世的腐朽朝廷里做大官的，无非是 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/6014/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/48464/">关于日课的计划</a>
-    </h2>
-    <p class="article-date">2019-03-06</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/6014/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/48464/">关于日课的计划</a>
+      </h2>
+      <p class="article-date">2019-03-06</p>
+      <!-- 
+          
   <a href="/tags#生活 经历" >
     <span class="tag-code">生活 经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        最近在读「曾国藩传」，其中有一个特别引起我注意的地方：
+         -->
+      <!-- <div class="article-summary">
+          
+            最近在读「曾国藩传」，其中有一个特别引起我注意的地方：
 曾国藩为了自己做一个圣人的志向，向别人求学方法，最后得到了一个看似十分笨拙的方法：决定每日写日课反思自己。
 什么是日课呢？
 就是今日干了什么，规定的任务是否完成，做错了什么，该怎么做，算是一个小的总结。
 日课也不必很长，短的不过百字，但 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/48464/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/21821/">关于双拼那些事</a>
-    </h2>
-    <p class="article-date">2019-02-21</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/48464/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/21821/">关于双拼那些事</a>
+      </h2>
+      <p class="article-date">2019-02-21</p>
+      <!-- 
+          
   <a href="/tags#Tools" >
     <span class="tag-code">Tools</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        关于双拼那些事先说明一下，这篇文不是双拼的教程，而是我最近一段时间学习和使用双拼的体验，如果看了文章也想用双拼，建议搜索小鹤双拼学习即可。如果你本来想学双拼，看了我的文章之后不想学了……我只想说：别，别走……
+         -->
+      <!-- <div class="article-summary">
+          
+            关于双拼那些事先说明一下，这篇文不是双拼的教程，而是我最近一段时间学习和使用双拼的体验，如果看了文章也想用双拼，建议搜索小鹤双拼学习即可。如果你本来想学双拼，看了我的文章之后不想学了……我只想说：别，别走……
 好，下面进入正题。
 从接触打字以来我都是用全拼的，双拼在我的认识里一直只是在切换输 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/21821/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/32137/">怎么立 Flag 才不会倒？</a>
-    </h2>
-    <p class="article-date">2019-02-19</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/21821/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/32137/">怎么立 Flag 才不会倒？</a>
+      </h2>
+      <p class="article-date">2019-02-19</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        怎么立 Flag 才不会倒？俗话说得好，正月里都是年，给大家拜个晚年，祝愿猪年里的大家也能福气满满，财源广进。同时也祝大家元宵节快乐，今晚记得吃好。
+         -->
+      <!-- <div class="article-summary">
+          
+            怎么立 Flag 才不会倒？俗话说得好，正月里都是年，给大家拜个晚年，祝愿猪年里的大家也能福气满满，财源广进。同时也祝大家元宵节快乐，今晚记得吃好。
 之前放假回家探亲有半个月，期间为了多陪陪家人，也没写文，只是在打腹稿。
 这一回来就要开始新一年的奋斗了，为了让自己的奋斗有方向，有目标，立几个 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/32137/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/18710/">写在狗年的尾巴</a>
-    </h2>
-    <p class="article-date">2019-01-28</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/32137/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/18710/">写在狗年的尾巴</a>
+      </h2>
+      <p class="article-date">2019-01-28</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        写在狗年的尾巴今天已经是小年了，相信很多人已经到家或者在回家的路上了，还没放假的心里也一定多少有点躁动不安无心干正事了吧。
+         -->
+      <!-- <div class="article-summary">
+          
+            写在狗年的尾巴今天已经是小年了，相信很多人已经到家或者在回家的路上了，还没放假的心里也一定多少有点躁动不安无心干正事了吧。
 过年最长也就十几天假期，却多多少少影响了我们将近一个月的心情。很多人从过完元旦心底就有点犯懒惰了，公司肯定也会安排一些总结、考评、年会庆祝工作之类的，更是打乱了工作的节 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/18710/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/50016/">程序员的 Tricks - 02</a>
-    </h2>
-    <p class="article-date">2019-01-08</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/18710/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/50016/">程序员的 Tricks - 02</a>
+      </h2>
+      <p class="article-date">2019-01-08</p>
+      <!-- 
+          
   <a href="/tags#Tools" >
     <span class="tag-code">Tools</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        程序员的 Tricks - 02嗯，这个栏目好久没更啦，主要是懒，但其次，很久没遇到过需要特殊处理的数据，其实也是一种幸福……
+         -->
+      <!-- <div class="article-summary">
+          
+            程序员的 Tricks - 02嗯，这个栏目好久没更啦，主要是懒，但其次，很久没遇到过需要特殊处理的数据，其实也是一种幸福……
 好，直接进入正题，介绍一下情景：需求方提供了一堆格式类似的文件（视频、图片、文档等），这些文件的文件名已经按照要求命名好，放在层层嵌套的分类文件夹里，而在前端因为要 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/50016/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/59341/">读书 -「前方的路」</a>
-    </h2>
-    <p class="article-date">2019-01-07</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/50016/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/59341/">读书 -「前方的路」</a>
+      </h2>
+      <p class="article-date">2019-01-07</p>
+      <!-- 
+          
   <a href="/tags#读书笔记" >
     <span class="tag-code">读书笔记</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        读书 -「前方的路」2019 的第一本书，读了阮一峰老师的博客集「前方的路」，这本书是从 2003 年到 2014 年阮老师博客里一些文章的精选，很多都是阮老师读书、看电影或者看报看新闻得到的启发、思考。
+         -->
+      <!-- <div class="article-summary">
+          
+            读书 -「前方的路」2019 的第一本书，读了阮一峰老师的博客集「前方的路」，这本书是从 2003 年到 2014 年阮老师博客里一些文章的精选，很多都是阮老师读书、看电影或者看报看新闻得到的启发、思考。
 从中可以看到一个人十年中思考方式、生活感悟的变化，也可以看到一个人十年中的坚守和初心。 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/59341/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/30816/">常用图表总结——柱图</a>
-    </h2>
-    <p class="article-date">2018-09-19</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/59341/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/30816/">常用图表总结——柱图</a>
+      </h2>
+      <p class="article-date">2018-09-19</p>
+      <!-- 
+          
   <a href="/tags#Tools" >
     <span class="tag-code">Tools</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        最近工作上遇到很多图表展示的情景，很多时候我们都会被长得类似的图表或者多种图一起用的情况给弄懵，一时间不知道图表究竟要传达怎样的含义，为了更好的使用图表传达我想要的效果，我在「墨者学院」上学习了一些相关内容。
+         -->
+      <!-- <div class="article-summary">
+          
+            最近工作上遇到很多图表展示的情景，很多时候我们都会被长得类似的图表或者多种图一起用的情况给弄懵，一时间不知道图表究竟要传达怎样的含义，为了更好的使用图表传达我想要的效果，我在「墨者学院」上学习了一些相关内容。
 虽然蚂蚁金服团队总结的已经比较完善了，但对我来说，「墨者学院」有一个很大的问题就是 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/30816/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/53827/">别在信息洪流里迷失了方向</a>
-    </h2>
-    <p class="article-date">2018-08-26</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/30816/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/53827/">别在信息洪流里迷失了方向</a>
+      </h2>
+      <p class="article-date">2018-08-26</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        别在信息洪流里迷失了方向最近一段时间，身边发生的事特别多，疫苗事件，P2P 大规模暴雷，租房市场的乱象，等等等等，我就不一一列举了，大家都懂的，件件都关乎着努力搬砖的我们的切身利益。
+         -->
+      <!-- <div class="article-summary">
+          
+            别在信息洪流里迷失了方向最近一段时间，身边发生的事特别多，疫苗事件，P2P 大规模暴雷，租房市场的乱象，等等等等，我就不一一列举了，大家都懂的，件件都关乎着努力搬砖的我们的切身利益。
 随便打开一个社交媒体，讨论这些事的信息都像疾风骤雨般扑面而来，你不得不关注。
 微博热搜榜、话题层出不穷。微信 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/53827/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/49696/">程序员的 Tricks - 01</a>
-    </h2>
-    <p class="article-date">2018-08-10</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/53827/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/49696/">程序员的 Tricks - 01</a>
+      </h2>
+      <p class="article-date">2018-08-10</p>
+      <!-- 
+          
   <a href="/tags#Tools" >
     <span class="tag-code">Tools</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        这两天坐地铁，听到站内广播：
+         -->
+      <!-- <div class="article-summary">
+          
+            这两天坐地铁，听到站内广播：
 北京地铁站内不再开具纸质发票，有需要的乘客得去 「北京一卡通 APP」获取电子发票。
 得，无纸化了。
 这其实也算是城市无纸化办公模式的一个缩影。不知道大家注意过没有，现在很多发票都变成电子的了，申领操作也都可以通过网络以及各种电子设备进行。
 这也就从侧面反映出相 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/49696/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/65333/">工具推荐——Cmder</a>
-    </h2>
-    <p class="article-date">2018-07-22</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/49696/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/65333/">工具推荐——Cmder</a>
+      </h2>
+      <p class="article-date">2018-07-22</p>
+      <!-- 
+          
   <a href="/tags#Tools" >
     <span class="tag-code">Tools</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        做开发久了，每次在论坛上查找问题的时候总是看到用 Mac 或者其他非 Windows 环境开发者的终端截图，又漂亮又明晰，看着才有点像电影里演的 Hacker 那样高大上。然而大多数是用 Windows 自带终端的我们，看起来总是不那么酷炫，并且使用中确实有些必要的、能提升开发效率的功能是缺 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/65333/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/5018/">2018 年中总结</a>
-    </h2>
-    <p class="article-date">2018-07-21</p>
-    <!-- 
-      
+         -->
+      <!-- <div class="article-summary">
+          
+            做开发久了，每次在论坛上查找问题的时候总是看到用 Mac 或者其他非 Windows 环境开发者的终端截图，又漂亮又明晰，看着才有点像电影里演的 Hacker 那样高大上。然而大多数是用 Windows 自带终端的我们，看起来总是不那么酷炫，并且使用中确实有些必要的、能提升开发效率的功能是缺 ...
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/65333/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/5018/">2018 年中总结</a>
+      </h2>
+      <p class="article-date">2018-07-21</p>
+      <!-- 
+          
   <a href="/tags#个人经历" >
     <span class="tag-code">个人经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        2018 年中总结年初（啊好吧其实那个时候已经四月五月了……）给自己定了几个小目标：
+         -->
+      <!-- <div class="article-summary">
+          
+            2018 年中总结年初（啊好吧其实那个时候已经四月五月了……）给自己定了几个小目标：
 1、学车考驾照2、画完『 30 天学会绘画』这本书3、学习 Python4、学习 UI 方面的知识5、思考清楚人生的方向，究竟是继续坚持考研，还是赶紧充实自己，获得职业的提升
 半年时间已经飞快的过去了，下面 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/5018/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/38946/">Echarts 之复合饼图的解决方案</a>
-    </h2>
-    <p class="article-date">2018-05-22</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/5018/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/38946/">Echarts 之复合饼图的解决方案</a>
+      </h2>
+      <p class="article-date">2018-05-22</p>
+      <!-- 
+          
   <a href="/tags#Echarts" >
     <span class="tag-code">Echarts</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        
+         -->
+      <!-- <div class="article-summary">
+          
+            
 Echarts 是百度出品的功能强大的开源可视化库，由 Javascript 实现。具有丰富的可视化类型，良好的跨平台特性，绚丽的视觉效果。是大数据分析展示的有力武器
 
 老实说其实在我刚进入前端开发这个领域的时候就听说并使用了 Echarts ，那个时候还是 1.0 版本。
 最开始只是用到 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/38946/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/12448/">Javascript 之数组操作（下）</a>
-    </h2>
-    <p class="article-date">2018-03-15</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/38946/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/12448/">Javascript 之数组操作（下）</a>
+      </h2>
+      <p class="article-date">2018-03-15</p>
+      <!-- 
+          
   <a href="/tags#Javascript" >
     <span class="tag-code">Javascript</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        
+         -->
+      <!-- <div class="article-summary">
+          
+            
 嗯，接着上次的写，这次写的几个方法，使用频率相对来说少一些，最后几个混个眼熟吧，可能不经常用还是会忘记（捂脸
 
 数组的常用操作数组的常用方法copyWithin()用于复制调用数组中的一部分，到调用数组的指定位置。会覆盖原有的元素。
 用法：12345678910// copyWithin( ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/12448/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/52385/">Javascript 之数组操作（上）</a>
-    </h2>
-    <p class="article-date">2018-02-06</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/12448/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/52385/">Javascript 之数组操作（上）</a>
+      </h2>
+      <p class="article-date">2018-02-06</p>
+      <!-- 
+          
   <a href="/tags#Javascript" >
     <span class="tag-code">Javascript</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        
+         -->
+      <!-- <div class="article-summary">
+          
+            
 从今天开始，将系统总结一系列 Javascript （Js）的原生操作。因为平时很多时候都是在使用现成的 Js 框架进行开发，（如 Jquery、AngularJs 等），对 Js 本身反倒没有太多关注。但万变不离其宗，相信对 Js 更深入、更全面的掌握，才是更好理解、运用上层框架的基础。 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/52385/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/10470/">Hexo 博客搭建</a>
-    </h2>
-    <p class="article-date">2017-09-02</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/52385/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/10470/">Hexo 博客搭建</a>
+      </h2>
+      <p class="article-date">2017-09-02</p>
+      <!-- 
+          
   <a href="/tags#博客搭建" >
     <span class="tag-code">博客搭建</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        我的博客是通过 Hexo + GitHub Pages 搭建的，如果你也想搭建自己的专属博客，也有其他的选择，比如 WordPress 等，下面来讲讲我的博客搭建的过程。
+         -->
+      <!-- <div class="article-summary">
+          
+            我的博客是通过 Hexo + GitHub Pages 搭建的，如果你也想搭建自己的专属博客，也有其他的选择，比如 WordPress 等，下面来讲讲我的博客搭建的过程。
 材料准备
 GitHub 帐号一个
 node、npm、git 环境
 可能需要梯子（或配置 npm 镜像）
 Hexo中文文档 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/10470/">Read more</a> -->
-  </article>
-  
-  
-  
-  
-  
-  <!--  -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="/posts/60785/">终于开始写博客了</a>
-    </h2>
-    <p class="article-date">2017-08-23</p>
-    <!-- 
-      
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/10470/">Read more</a> -->
+    </article>
+    
+
+    
+
+    
+    <!--  -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/60785/">终于开始写博客了</a>
+      </h2>
+      <p class="article-date">2017-08-23</p>
+      <!-- 
+          
   <a href="/tags#生活 经历" >
     <span class="tag-code">生活 经历</span>
   </a>
 
-     -->
-    <!-- <div class="article-summary">
-      
-        也不知在黑暗里沉睡了多久说起来，真的非常非常久都没有写过东西了，除了每次过年的时候觉得自己必须得写点什么而诞生的年终总结。近些年连微博这种一篇只要140个字符的短消息我都没有怎么发表过。
+         -->
+      <!-- <div class="article-summary">
+          
+            也不知在黑暗里沉睡了多久说起来，真的非常非常久都没有写过东西了，除了每次过年的时候觉得自己必须得写点什么而诞生的年终总结。近些年连微博这种一篇只要140个字符的短消息我都没有怎么发表过。
 并不是没有话说，而是要说的话太多，不知从何说起。
 从前的时候，说自己的感受，是渴望自己被听到，被了解，而 ...
-      
-    </div> -->
-    <!-- <a class="more" href="/posts/60785/">Read more</a> -->
-  </article>
-  
-  
-  
+          
+        </div> -->
+      <!-- <a class="more" href="/posts/60785/">Read more</a> -->
+    </article>
+    
 
-  
+    
+
+    
+  </div>
+
+  <div class="lcontent tag-list">
+  </div>
+
 </main>
 
+<div class="rcontent">
+  <div id="tag-cloud">
+    
+    
+    <a class="tag tag2" data-name="tag-个人经历">个人经历</a>
+    
+    
+    <a class="tag tag1" data-name="tag-Flutter">Flutter</a>
+    
+    
+    <a class="tag tag1" data-name="tag-博客搭建">博客搭建</a>
+    
+    
+    <a class="tag tag1" data-name="tag-Echarts">Echarts</a>
+    
+    
+    <a class="tag tag1" data-name="tag-Tools">Tools</a>
+    
+    
+    <a class="tag tag0" data-name="tag-生活 经历">生活 经历</a>
+    
+    
+    <a class="tag tag1" data-name="tag-Javascript">Javascript</a>
+    
+    
+    <a class="tag tag1" data-name="tag-读书笔记">读书笔记</a>
+    
+    
+    <a class="tag tag1" data-name="tag-云服务器">云服务器</a>
+    
+  </div>
+</div>
 
+<script>
+  (function () {
+    var tagList = []
+    $(".tag").on('click', function () {
+      var src = $(this)[0]
+      var tagName = $(this)[0].dataset.name
+      $($(this)[0]).toggleClass('active-tag')
+      if (tagList.indexOf(tagName) > -1) {
+        tagList.splice(tagList.indexOf(tagName), 1)
+      } else {
+        tagList.push(tagName)
+      }
+      console.log(src)
+      $('.lcontent.tag-list').empty();
+
+      var html =
+        `<div class="tag-list-index"><h3 class="tag-name" id="tag-个人经历">个人经历</h3><ul class="tag-preview"><li><a href="/posts/23468/">2019 年度总结</a></li></ul><ul class="tag-preview"><li><a href="/posts/5018/">2018 年中总结</a></li></ul><ul class="tag-preview"><li><a href="/posts/42741/">一些开心事</a></li></ul><ul class="tag-preview"><li><a href="/posts/52716/">又一次告别</a></li></ul><ul class="tag-preview"><li><a href="/posts/18710/">写在狗年的尾巴</a></li></ul><ul class="tag-preview"><li><a href="/posts/18239/">又见套路…</a></li></ul><ul class="tag-preview"><li><a href="/posts/32137/">怎么立 Flag 才不会倒？</a></li></ul><ul class="tag-preview"><li><a href="/posts/59642/">时刻记着把自己放在低位</a></li></ul><ul class="tag-preview"><li><a href="/posts/53827/">别在信息洪流里迷失了方向</a></li></ul><ul class="tag-preview"><li><a href="/posts/62534/">写博客的一点感悟</a></li></ul><ul class="tag-preview"><li><a href="/posts/38700/">病中杂谈</a></li></ul><ul class="tag-preview"><li><a href="/posts/24877/">走在持续行动的路上</a></li></ul><ul class="tag-preview"><li><a href="/posts/56092/">记录一下我的考研路</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-Flutter">Flutter</h3><ul class="tag-preview"><li><a href="/posts/40166/">Flutter 踩坑记录</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-博客搭建">博客搭建</h3><ul class="tag-preview"><li><a href="/posts/10470/">Hexo 博客搭建</a></li></ul><ul class="tag-preview"><li><a href="/posts/34286/">博客图床的迁移</a></li></ul><ul class="tag-preview"><li><a href="/posts/31145/">Hexo 博客阿里云同步部署更新</a></li></ul><ul class="tag-preview"><li><a href="/posts/62063/">我的 Hexo 博客进阶（一）</a></li></ul><ul class="tag-preview"><li><a href="/posts/28268/">我的 Hexo 博客进阶（三）</a></li></ul><ul class="tag-preview"><li><a href="/posts/25110/">我的 Hexo 博客进阶（二）</a></li></ul><ul class="tag-preview"><li><a href="/posts/25109/">我的 Hexo 博客进阶（四）</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-Echarts">Echarts</h3><ul class="tag-preview"><li><a href="/posts/38946/">Echarts 之复合饼图的解决方案</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-Tools">Tools</h3><ul class="tag-preview"><li><a href="/posts/21821/">关于双拼那些事</a></li></ul><ul class="tag-preview"><li><a href="/posts/30816/">常用图表总结——柱图</a></li></ul><ul class="tag-preview"><li><a href="/posts/34350/">常用图表总结——线图</a></li></ul><ul class="tag-preview"><li><a href="/posts/65333/">工具推荐——Cmder</a></li></ul><ul class="tag-preview"><li><a href="/posts/50016/">程序员的 Tricks - 02</a></li></ul><ul class="tag-preview"><li><a href="/posts/49696/">程序员的 Tricks - 01</a></li></ul><ul class="tag-preview"><li><a href="/posts/929/">程序员的 Tricks - 03</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-生活 经历">生活 经历</h3><ul class="tag-preview"><li><a href="/posts/48464/">关于日课的计划</a></li></ul><ul class="tag-preview"><li><a href="/posts/60785/">终于开始写博客了</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-Javascript">Javascript</h3><ul class="tag-preview"><li><a href="/posts/12448/">Javascript 之数组操作（下）</a></li></ul><ul class="tag-preview"><li><a href="/posts/52385/">Javascript 之数组操作（上）</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-读书笔记">读书笔记</h3><ul class="tag-preview"><li><a href="/posts/31895/">读书 - 「乔布斯传」</a></li></ul><ul class="tag-preview"><li><a href="/posts/59341/">读书 -「前方的路」</a></li></ul><ul class="tag-preview"><li><a href="/posts/20221/">读书 -「活出生命的意义」</a></li></ul><ul class="tag-preview"><li><a href="/posts/6014/">读书 - 「曾国藩传」</a></li></ul></div><div class="tag-list-index"><h3 class="tag-name" id="tag-云服务器">云服务器</h3><ul class="tag-preview"><li><a href="/posts/22932/">阿里云轻量应用服务器入坑</a></li></ul></div>`
+      let $html = $(html)
+      $html.each((index, $element) => {
+        let appendItem = null
+        let child = $element.children
+        let itemName = child[0].id
+        if (tagList.indexOf(itemName) > -1) {
+          $('.lcontent.tag-list').append($element)
+        }
+      });
+      
+      tagList.length === 0 ? $('.lcontent.article-list').css('display', 'block') : $('.lcontent.article-list').css(
+        'display', 'none')
+      tagList.length === 0 ? $('.lcontent.tag-list').css('display', 'none') : $('.lcontent.tag-list').css(
+        'display', 'block')
+    })
+  })();
+</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
@@ -1161,17 +1260,17 @@ Hexo中文文档 ...
   }
 </script>
 <script>
-  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
     FastClick.attach(document.body);
   })
 </script>
 
 <script>
   var hasLine = 'true';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
     $('figure pre').each(function(i, block) {
       var figure = $(this).parents('figure');
-      if (hasLine == 'false') {
+      if (hasLine === 'false') {
         figure.find('.gutter').hide();
       }
       var lang = figure.attr('class').split(' ')[1] || 'code';
