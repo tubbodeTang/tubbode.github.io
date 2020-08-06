@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="前端 UI">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" type="image/ico" href="/css/images/myLogo.png"/> 
+  <!-- 
+    <link rel="shortcut icon" type="image/ico" href="css/images/myLogo.png"/> 
+   -->
+  <title>
+    
+      我的 Hexo 博客进阶（二） | tubbodeTang
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+</head>
+<div class="wechat-share">
+  <!-- <img src="/css/images/myLogo.jpg" /> -->
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <!-- <div class="logo"></div> -->
+      <i class="iconfont">&#xe602;</i>
+      <span>踏波堂</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">合集</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于我</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">合集</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于我</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>我的 Hexo 博客进阶（二）</h2>
+  <!-- <p class="post-date">07/31/2019</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><p>有了博客之后，当然是需要被更多人看到了，我们总不希望自己写博客是写给自己看，自说自话的吧，那就不叫博客，叫日记了。所以博客进阶，我们来讲讲如何让更多人看到我们的静态博客。</p>
+<p>由于 GitHub 有防百度爬虫的措施，建议把我们的博客在 <a href="https://coding.net/" target="_blank" rel="external">Coding</a> 上也做一遍，这样国内用的比较多的百度搜索可以通过爬取 Coding 上的页面来找到我们的博客，国外搜索也不影响，双管齐下，提升我们博客被发现的效率。</p>
+<p>Coding 是腾讯旗下的代码托管平台，和 GitHub 类似，所以 Coding 同步 GitHub 博客，流程其实也和 GitHub 开启 Pages 服务差不多，有过 GitHub 部署博客的经验，相信在 Coding copy 一份也不是什么难事。</p>
+<h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>万事第一步，注册。不多说，先自行注册一个 Coding 平台的账号。</p>
+<h4 id="Coding-建立仓库及准备"><a href="#Coding-建立仓库及准备" class="headerlink" title="Coding 建立仓库及准备"></a>Coding 建立仓库及准备</h4><h5 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h5><p>这里可以直接提交我们的静态博客到新建的空仓库，也可以参阅 <a href="https://dev.tencent.com/help/git-import-tencentcloud" target="_blank" rel="external">腾讯开发者平台中的说明</a> 将 Github 上的仓库导入到 Coding。</p>
+<p>我这里采用的是导入的方法：</p>
+<p>在 Coding 中新建一个名为 <code>yourname.coding.me</code> 的项目，不勾选 <code>启用 README.md 文件初始化项目</code>，也不添加 <code>License</code> 和 <code>.gitignore</code> 文件。项目地址那里，会根据你的项目名称自动生成。由于 pages 服务对项目名有特殊要求，所以这里我们要尽量写成下面的形式，不然可能会造成页面无法正常打开，后面修改路径会很麻烦还容易出错。</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_10.png" alt=""></p>
+<h5 id="添加-SSH-Key"><a href="#添加-SSH-Key" class="headerlink" title="添加 SSH Key"></a>添加 SSH Key</h5><p>以前用 GitHub 的时候已经生成过密钥，密钥所在目录为(<code>C:\Users\yourUserName\.ssh\id_rsa</code>)，直接拷贝之后在个人设置中添加就好了</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_9.png" alt=""></p>
+<p>然后测试一下公钥：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@git.coding.net</div></pre></td></tr></table></figure>
+<p>成功之后就可以向 Coding 提交代码了。</p>
+<h4 id="导入-GitHub-的博客仓库到-Coding"><a href="#导入-GitHub-的博客仓库到-Coding" class="headerlink" title="导入 GitHub 的博客仓库到 Coding"></a>导入 GitHub 的博客仓库到 Coding</h4><p>见 <a href="https://dev.tencent.com/help/git-import-tencentcloud" target="_blank" rel="external">腾讯开发者平台中的说明</a> </p>
+<p>大致步骤如下：（注意地址要和自己的仓库保持一致）</p>
+<ol>
+<li><p>将 Github 上想要导入的项目完整克隆到本地。</p>
+<p>本地执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/yourname/yourname.github.io.git --bare</div></pre></td></tr></table></figure>
+</li>
+<li><p>克隆完成后，将克隆好的仓库推送到 Coding 上。<br>使用 Coding 仓库页面提供的 URL。推送所有的分支和对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd yourname.github.io.git</div><div class="line"></div><div class="line">git push https://git.dev.tencent.com/yourname/yourname.coding.me.git --all</div></pre></td></tr></table></figure>
+</li>
+<li><p>完成后，再推送所有的标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push https://git.dev.tencent.com/yourname/yourname.coding.me.git --tags</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这样，整个博客仓库就全部导入到 Coding 了。</p>
+<h4 id="博客设置同步推送"><a href="#博客设置同步推送" class="headerlink" title="博客设置同步推送"></a>博客设置同步推送</h4><p>修改博客根目录下的<code>_config.yml</code>文件，内容如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> </div><div class="line"><span class="attr">      github:</span> <span class="string">git@github.com:yourname/yourname.github.io.git</span></div><div class="line"><span class="attr">      coding:</span> <span class="string">git@git.dev.tencent.com:yourname/yourname.coding.me.git</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
+<p>测试一下是否正确，需要重新生成部署</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>看到 Github 和 Coding 同步更新的记录，说明设置成功。</p>
+<h4 id="打开-Coding-的-Pages-服务"><a href="#打开-Coding-的-Pages-服务" class="headerlink" title="打开 Coding 的 Pages 服务"></a>打开 Coding 的 Pages 服务</h4><p>直接在左侧栏找到 <code>代码 - pages 服务</code> 选项卡，一键开启即可。</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_12.png" alt="开启 Pages 服务"></p>
+<p>片刻，开启成功：</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_13.png" alt=""></p>
+<p>直接点击访问地址，就可以看到自己的静态博客了。</p>
+<p>Coding 会帮我们自动做一些配置，因为我们的博客只有 master 分支，所以默认就建立在 master 分支上。我们也可以做一些其他的设置，比如绑定域名之类的，这个在 <a href="">博客进阶（一）</a> 中我们已经讲过，有需要的可以参考设置一下。</p>
+<p><img src="http://image.tubbodetang.site/blog_adv_2_11.png" alt=""></p>
+<p>至此，我们的 Coding 博客已经全部设置完成了。下一篇打算整理一下怎么把站点提交到各大搜索引擎，让他们的爬虫来发现我们的博客。</p>
+<p>————————————</p>
+<p>参考文章：</p>
+<p><a href="http://fengdi.org/2017/08/07/Hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96.html" target="_blank" rel="external">Hexo博客之速度优化</a></p>
+</section>
+    <!-- 
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#博客搭建" >
+    <span class="tag-code">博客搭建</span>
+  </a>
+
+      </div>
+     -->
+    <!-- <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div> -->
+    <div class="time-tag">
+      <span>tubbodeTang</span>
+      <span>2019-07-31</span>
+    </div>
+
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    
+      <div id="comments"></div>
+    
+  </article>
+</main>
+
+<script>
+  (function () {
+    var url = 'http://www.tubbodetang.site/posts/25110/';
+    var banner = ''
+    if (banner) {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
+    })
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      var imageW = $(this).width()
+      var imageH = $(this).height()
+      
+      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+      zoom = zoom < 1 ? 1 : zoom
+      zoom = zoom > 2 ? 2 : zoom
+      var transY = (($(window).height() - imageH) / 2).toFixed(2)
+      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+      $('.image-view-wrap').addClass('wrap-active')
+      $('.image-view-wrap img').css({
+        'width': `${imageW}`,
+        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+      })
+      $('html').css('overflow', 'hidden')
+      $('.image-view-wrap').on('click', function() {
+        $(this).remove()
+        $('html').attr('style', '')
+      })
+    })
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+    // gitment
+    var gitmentConfig = "tubbodeTang";
+    if (gitmentConfig != "undefined") {
+      var gitment = new Gitment({
+        id: "我的 Hexo 博客进阶（二）",
+        owner: "tubbodeTang",
+        repo: "tubbodeTang.github.io",
+        oauth: {
+          client_id: "2eb057f87192cbf561c3",
+          client_secret: "db8188fb69bd9075c92b9a0fc2efc659b4194d9c"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
+    <br>
+    based on <a href="https://github.com/yanm1ng">yanm1ng</a>
+    <br>
+    <a href="http://beian.miit.gov.cn" target="_blank">京ICP备19051280号</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+<script src="/js/load.js"></script>
+<script src="/js/search.js"></script>
+  </body>
+</html>

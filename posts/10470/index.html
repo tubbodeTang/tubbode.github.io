@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="前端 UI">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" type="image/ico" href="/css/images/myLogo.png"/> 
+  <!-- 
+    <link rel="shortcut icon" type="image/ico" href="css/images/myLogo.png"/> 
+   -->
+  <title>
+    
+      Hexo 博客搭建 | tubbodeTang
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+</head>
+<div class="wechat-share">
+  <!-- <img src="/css/images/myLogo.jpg" /> -->
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <!-- <div class="logo"></div> -->
+      <i class="iconfont">&#xe602;</i>
+      <span>踏波堂</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">合集</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于我</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">合集</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于我</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Hexo 博客搭建</h2>
+  <!-- <p class="post-date">09/02/2017</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><p>我的博客是通过 Hexo + GitHub Pages 搭建的，如果你也想搭建自己的专属博客，也有其他的选择，比如 WordPress 等，下面来讲讲我的博客搭建的过程。</p>
+<h4 id="材料准备"><a href="#材料准备" class="headerlink" title="材料准备"></a>材料准备</h4><ul>
+<li>GitHub 帐号一个</li>
+<li>node、npm、git 环境</li>
+<li>可能需要梯子（或配置 npm 镜像）</li>
+<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo中文文档</a></li>
+</ul>
+<h4 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h4><p>通过 npm 来全局安装 Hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+<p>如果总是出错，就用梯子试试，因为有些依赖包可能在墙外。</p>
+<p>安装好之后就可以全局使用 Hexo 命令了。</p>
+<h4 id="用-Hexo-生成博客模版"><a href="#用-Hexo-生成博客模版" class="headerlink" title="用 Hexo 生成博客模版"></a>用 Hexo 生成博客模版</h4><p>在自己需要的地方新建一个文件夹，比如 MyBlog。</p>
+<p>然后进入 MyBlog 文件夹，在该路径下启动命令行工具，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+<p>Hexo 会帮助你建立一个初始的博客模版，并且自动下载依赖包。</p>
+<p>同上，如果依赖包总是出错安不上，建议爬梯试试。</p>
+<p>图为正在初始化和安装依赖包</p>
+<p><img src="http://image.tubbodetang.site/blog_build_1.png" alt=""></p>
+<p>片刻后依赖包安装完成</p>
+<p><img src="http://image.tubbodetang.site/blog_build_2.png" alt=""></p>
+<p>至此，最初始的低级博客配置已经 OK 了，我们甚至可以在当前目录运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>然后打开浏览器，访问 <code>localhost:4000</code> 就可以看到我们的初始页面了。</p>
+<p><img src="http://image.tubbodetang.site/blog_build_3.png" alt=""></p>
+<p>这就是 Hexo 初始化博客的样子，如果你不嫌弃，其实也可以直接用这个作为博客的样子哦。</p>
+<p>嗯……不过多少还是有点丑，后面可以再慢慢优化……</p>
+<h4 id="熟悉-Hexo-命令"><a href="#熟悉-Hexo-命令" class="headerlink" title="熟悉 Hexo 命令"></a>熟悉 Hexo 命令</h4><p>上面我们用到了 <code>hexo init</code> <code>hexo server</code> ，这些其实都是 Hexo 的命令，熟悉这些命令是用好 Hexo 的必备条件，可以去 Hexo 的官网查看各个命令的用法，我这里只说几个比较常用的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hexo clean     清除静态文件生成后的缓存，更新博客样式之后如果看不到效果就是有缓存，用这个命令来清理。</div><div class="line">hexo generate  生成博客要发布的静态文件</div><div class="line">hexo deploy    发布博客</div><div class="line"></div><div class="line">hexo <span class="built_in">help</span>      查看 Hexo 命令的使用帮助，会列出所有的 Hexo 命令及用法</div><div class="line">hexo init      这个我们之前用过，就是初始化一个 Hexo 文件夹</div><div class="line">hexo new       新建一个文章，（用的不多，我都直接文件夹里新建，或者复制粘贴）</div><div class="line">hexo publish   把草稿从草稿文件夹移到待发布的文件夹中（用的不多，我都直接手动拖过去）</div><div class="line">hexo server    这个刚刚也用过，开启本地服务器，可以作为发布前的调试和查看确认</div></pre></td></tr></table></figure>
+<p>也可以用简写，比如最常用的两个 generate 和 deploy 可以写成：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<h4 id="同步推送到-GitHub-并利用-Github-Pages-发布博客"><a href="#同步推送到-GitHub-并利用-Github-Pages-发布博客" class="headerlink" title="同步推送到 GitHub 并利用 Github Pages 发布博客"></a>同步推送到 GitHub 并利用 Github Pages 发布博客</h4><p>之前我们只是在本地建好了我们的博客，也可以在本地服务器上看到我们的博客，那么接下来我们就要利用 GitHub 的 Pages 功能来让我们的博客人人能访问了。</p>
+<ol>
+<li><p>在 GitHub 上创建名为 yourname.github.io 的项目。（以个人账户为名的 Pages 服务只能建立一个）</p>
+</li>
+<li><p>安装 Hexo 的 git 工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置博客的 deploy 设置：</p>
+<p>在博客根目录下的 <code>_config.yml</code> 文件中，修改 deploy 配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> </div><div class="line"><span class="attr">      github:</span> <span class="string">git@github.com:yourname/yourname.github.io.git</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>生成、发布</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+</li>
+<li><p>开启 Github Pages 服务发布博客</p>
+<p>在项目的 Settings 中找到下面的设置，然后选择 master 分支即可开启 Pages 服务</p>
+<p><img src="http://image.tubbodetang.site/blog_build_5.png" alt=""></p>
+</li>
+<li><p>接下来浏览器访问 yourname.github.io ,就可以看到发布在互联网上的博客了。</p>
+</li>
+</ol>
+<p>到此，以后我们每一次修改博客，发布文章，都只需要执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>即可看到 GitHub 博客同步更新。</p>
+<h4 id="添加样式主题"><a href="#添加样式主题" class="headerlink" title="添加样式主题"></a>添加样式主题</h4><p>但是现在我们的博客样式还有点太丑，所以我们还要美化一下它。</p>
+<p>好在，Hexo 提供了开源样式库，都是大家制作分享的，我们自己也可以制作，但暂时没有那个时间，所以目前可以去 <a href="https://hexo.io/themes/" target="_blank" rel="external">样式中心</a> 选择一个自己喜欢的样式，直接套用就可以了。</p>
+<p>套用的方法是：</p>
+<ol>
+<li><p>先把别人的主题文件去 GitHub 上克隆或者下载到 <code>themes</code> 文件夹里</p>
+</li>
+<li><p>配置博客根目录下的 <code>_config.yml</code> 文件如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></div><div class="line"><span class="attr">theme:</span> <span class="string">your-theme-name</span></div></pre></td></tr></table></figure>
+<p>这里的 <code>your-theme-name</code> 和 <code>themes</code> 文件夹中的主题文件名字保持一致即可。</p>
+</li>
+<li><p>修改主题配置在主题文件中的 <code>_config.yml</code> 文件修改</p>
+</li>
+</ol>
+<p>不过别人的样式终究有的地方不能符合自己的要求，多少需要自己修改下，但是这个比较需要代码知识，所以有空再单开文章一个写写我折腾的过程吧。</p>
+<p>刚搭建的博客，先挑一个自己喜欢的、差不多的样式用上，赶紧开始写文章才是正道。</p>
+<h4 id="发布第一篇文章"><a href="#发布第一篇文章" class="headerlink" title="发布第一篇文章"></a>发布第一篇文章</h4><p>发布文章很简单，你可以用上面提到的命令来创建并发布，也可以直接在 <code>source/_post</code> 文件夹下新建一个 Markdown 文件，在里面按照格式写好文章。</p>
+<p>然后 <code>hexo g</code> <code>hexo d</code> 生成发布就可以了。</p>
+<p>本文完。</p>
+<p>————————————</p>
+<p>接下来就是漫漫的写博客和折腾博客之路了，一起见证。</p>
+</section>
+    <!-- 
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#博客搭建" >
+    <span class="tag-code">博客搭建</span>
+  </a>
+
+      </div>
+     -->
+    <!-- <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div> -->
+    <div class="time-tag">
+      <span>tubbodeTang</span>
+      <span>2017-09-02</span>
+    </div>
+
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    
+      <div id="comments"></div>
+    
+  </article>
+</main>
+
+<script>
+  (function () {
+    var url = 'http://www.tubbodetang.site/posts/10470/';
+    var banner = ''
+    if (banner) {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
+    })
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      var imageW = $(this).width()
+      var imageH = $(this).height()
+      
+      var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+      zoom = zoom < 1 ? 1 : zoom
+      zoom = zoom > 2 ? 2 : zoom
+      var transY = (($(window).height() - imageH) / 2).toFixed(2)
+      $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+      $('.image-view-wrap').addClass('wrap-active')
+      $('.image-view-wrap img').css({
+        'width': `${imageW}`,
+        'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+      })
+      $('html').css('overflow', 'hidden')
+      $('.image-view-wrap').on('click', function() {
+        $(this).remove()
+        $('html').attr('style', '')
+      })
+    })
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+    // gitment
+    var gitmentConfig = "tubbodeTang";
+    if (gitmentConfig != "undefined") {
+      var gitment = new Gitment({
+        id: "Hexo 博客搭建",
+        owner: "tubbodeTang",
+        repo: "tubbodeTang.github.io",
+        oauth: {
+          client_id: "2eb057f87192cbf561c3",
+          client_secret: "db8188fb69bd9075c92b9a0fc2efc659b4194d9c"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/tubbodeTang">tubbodeTang</a>
+    <br>
+    based on <a href="https://github.com/yanm1ng">yanm1ng</a>
+    <br>
+    <a href="http://beian.miit.gov.cn" target="_blank">京ICP备19051280号</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+<script src="/js/load.js"></script>
+<script src="/js/search.js"></script>
+  </body>
+</html>
